@@ -1,0 +1,27 @@
+---
+import Nav from '../components/Nav';
+
+interface Props {
+  titol: string;
+}
+const { titol } = Astro.props;
+console.info('Càrrega Layout');
+---
+
+<html lang='ca'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/1553263.png' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{titol}</title>
+  </head>
+  <body>
+    <header>
+      <Nav/>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
