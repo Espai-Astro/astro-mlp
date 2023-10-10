@@ -1,9 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Nav from '../components/Nav';
+import Inici from '../components/Inici.astro';
+
+interface Props {
+	titol: string;
+}
+const { titol } = Astro.props;
 ---
 
 <Layout titol='Inici-Astro-MLP'>
-	<h1>Pàgina principal</h1>
-	<a href="/nosaltres">Clica</a>
+	<Inici/>
 </Layout>
