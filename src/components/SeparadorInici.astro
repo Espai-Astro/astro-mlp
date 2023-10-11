@@ -9,3 +9,41 @@
   <path id='separadorInici' fill='none' stroke='url(#gradient)' stroke-width='4'
   ></path>
 </svg>
+
+<style>
+  #separadorInici {
+    animation: pintarSeparador 1.5s forwards 1s ease-out;
+  }
+
+  @keyframes pintarSeparador {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+</style>
+
+<script>
+  function actualitzarDades() {
+    const textInici = document.querySelector('#textInici') as HTMLElement;
+    const separadorInici = document.querySelector(
+      '#separadorInici'
+    ) as SVGPathElement;
+    const dadesInici = document.querySelector('#dadesInici') as HTMLElement;
+
+    if (textInici && separadorInici && dadesInici) {
+      separadorInici.setAttribute(
+        'd',
+        `M0,0 V${textInici.offsetHeight} H${textInici.offsetWidth} v${
+          dadesInici.offsetHeight * 3
+        }`
+      );
+    }
+
+    const midaSeparadorInici = separadorInici.getTotalLength();
+    separadorInici.style.strokeDasharray = midaSeparadorInici.toString();
+    separadorInici.style.strokeDashoffset = midaSeparadorInici.toString();
+  }
+
+  window.addEventListener('DOMContentLoaded', actualitzarDades);
+  window.addEventListener('resize', actualitzarDades);
+</script>

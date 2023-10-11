@@ -26,6 +26,8 @@ const Nav = () => {
       <h1 className='text-lg font-bold'>
         <a href='/'>Hua</a>
       </h1>
+
+      {/* Hamburguesa */}
       {maxXL && (
         <div
           onClick={() => setClicat(!clicat)}
@@ -48,6 +50,8 @@ const Nav = () => {
             className='block h-0.5 w-4 bg-black'></motion.span>
         </div>
       )}
+
+      {/* Menu > XL */}
       {!maxXL && (
         <ul className='flex gap-12'>
           <li>
@@ -61,13 +65,15 @@ const Nav = () => {
           </li>
         </ul>
       )}
+
+      {/* Menu < XL */}
       {maxXL && clicat && (
-        <div className='fixed top-0 left-0 w-screen bg-white h-screen flex justify-center items-center z-10'>
+        <div className='fixed top-0 left-0 w-screen h-auto bg-white pt-16 pb-24 flex justify-center items-center z-10'>
           <motion.ul
             variants={animacioNav}
             animate='visible'
             initial='hidden'
-            className='flex flex-col gap-24 text-lg '>
+            className='flex flex-col justify-center items-center gap-24 text-lg '>
             <motion.li variants={animacioElementNav}>
               <a href='/'>Inici</a>
             </motion.li>
@@ -78,6 +84,15 @@ const Nav = () => {
               <a href='/contacte'>Contacte</a>
             </motion.li>
           </motion.ul>
+          <svg
+            className='absolute bottom-0 right-1/2 translate-x-1/2 -translate-y-6'
+            width='250'
+            height={4}
+            viewBox='0 0 250 4'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'>
+            <path d='M2 2L428 2' stroke='#282828' strokeLinecap='round' />
+          </svg>
         </div>
       )}
     </nav>

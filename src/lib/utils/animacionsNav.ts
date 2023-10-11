@@ -1,6 +1,6 @@
 export const animacioNav = {
   visible: {
-    opacity: 0.8,
+    opacity: 1,
     transition: {
       when: 'beforeChildren',
       staggerChildren: 0.15,

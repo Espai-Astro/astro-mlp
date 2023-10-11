@@ -1,0 +1,54 @@
+<div
+  id='dadesInici'
+  class='flex justify-center text-center w-full gap-6 xl:gap-12 px-3'>
+  <div class='w-24'>
+    <h2 class='text-xl'>Mostres</h2>
+    <p id='mostres' class='text-2xl font-bold'>0</p>
+  </div>
+  <div class='w-24'>
+    <h2 class='text-xl'>Valoracions</h2>
+    <p id='valoracions' class='text-2xl font-bold'>0</p>
+  </div>
+  <div class='w-24'>
+    <h2 class='text-xl'>Comentaris</h2>
+    <p id='comentaris' class='text-2xl font-bold'>0</p>
+  </div>
+</div>
+
+<script>
+  function incrementComptadors(
+    idComptador: 'mostres' | 'valoracions' | 'comentaris',
+    valorCorrent: number = 0,
+    valorFinal: number,
+    durada: number,
+    lletra: string = ''
+  ) {
+    return new Promise<void>((resolve) => {
+      let comptador = document.getElementById(idComptador) as HTMLElement;
+      let pasTemps = Math.abs(Math.floor(durada / valorFinal));
+      console.log(pasTemps);
+
+      let interval = setInterval(() => {
+        if (valorCorrent < valorFinal) {
+          valorCorrent++;
+          comptador.innerText = valorCorrent.toString() + lletra;
+        } else {
+          comptador.innerText = valorFinal.toString() + lletra;
+          clearInterval(interval);
+          resolve();
+        }
+      }, pasTemps);
+    });
+  }
+
+  async function dispararCompantadors() {
+    const promeses = [
+      incrementComptadors('mostres', 0, 85, 1500),
+      incrementComptadors('valoracions', 0, 550, 1500, 'k'),
+      incrementComptadors('comentaris', 0, 325, 1500),
+    ];
+    await Promise.allSettled(promeses);
+    console.log('Promeses ok');
+  }
+  dispararCompantadors();
+</script>

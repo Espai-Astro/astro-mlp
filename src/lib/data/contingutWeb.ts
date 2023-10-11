@@ -12,6 +12,6 @@ export const textosInici = [
   {
     id: 3,
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
-    claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam'],
+    claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam sint molestias'],
   },
 ];
