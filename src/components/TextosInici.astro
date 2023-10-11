@@ -1,0 +1,26 @@
+---
+import type { textIniciT } from '../lib/types';
+
+interface Props {
+  textosInici: textIniciT[];
+  classesClaus: string;
+}
+const { textosInici, classesClaus } = Astro.props;
+---
+
+<div id='textInici' class='pt-4 px-8 pb-12 text-lg flex flex-col gap-6'>
+  {
+    textosInici.map(({ text, claus }) => {
+      if (claus && claus.length > 0) {
+        claus
+          .filter((clau) => text.includes(clau))
+          .forEach((clau) => {
+            const htmlClau = ` <span class='${classesClaus}'>${clau}</span> `;
+            text = text.replace(clau, htmlClau);
+          });
+        return <p set:html={text} />;
+      }
+      return <p>{text}</p>;
+    })
+  }
+</div>
