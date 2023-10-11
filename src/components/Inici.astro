@@ -2,16 +2,31 @@
 import traç from '../assets/img/paint.png';
 import retrat from '../assets/img/main-portrait.jpg';
 
-const srcTraç = traç.src;
 const srcRetrat = retrat.src;
+const srcTraç = traç.src;
 ---
 
-<div class='relative mx-12 flex flex-col items-center justify-center'>
-  <h1 class='text-4xl'>
+<div class='relative mx-12 flex flex-col gap-12 items-center justify-center'>
+  <h1 class='text-3xl'>
     Entra a l'encantador <span class='font-bold'>món digital</span> de na Hua
   </h1>
   <div class='relative'>
-    <p id='textInici' class='p-6 text-lg'>
+    <svg class='absolute h-full w-full overflow-visible'>
+      <defs>
+        <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='0%'>
+          <stop offset='0%' style={{ stopColor: '#DC3A2B', stopOpacity: 1 }}
+          ></stop>
+          <stop offset='100%' style={{ stopColor: '#E18510', stopOpacity: 1 }}
+          ></stop>
+        </linearGradient>
+      </defs>
+      <path
+        id='separadorInici'
+        fill='none'
+        stroke='url(#gradient)'
+        stroke-width='4'></path>
+    </svg>
+    <p id='textInici' class='pt-4 px-8 pb-12 text-lg'>
       Lorem ipsum dolor sit <span class='font-bold text-red-700'
         >amet consectetur</span
       >, adipisicing elit. Et sit cum aperiam deserunt possimus, nisi veritatis.
@@ -19,22 +34,67 @@ const srcRetrat = retrat.src;
       laborum, cupiditate doloribus dignissimos ipsa eligendi quasi veritatis
       aliquam cumque tenetur eum earum repudiandae ea officiis reiciendis ex
       facilis.
-			<br /><br />
-			Nesciunt natus corrupti iste deleniti qui? Sed
-      maiores ipsum minus voluptates fugiat commodi quia sunt sint quam
-      temporibus. Alias culpa ipsam architecto ducimus nostrum voluptatibus
-      itaque omnis provident, <span class='font-bold text-red-700'
-        >voluptatum</span> laudantium necessitatibus minima! Quam
-      consequuntur nesciunt unde animi!
-			<br /><br />
-			Enim quidem blanditiis,
-      accusamus vero ab animi rerum consequuntur! Doloribus velit porro
-      <span class='font-bold text-red-700'
-        >consectetur placeat</span> odio optio officia non nesciunt dolorem est beatae
-      animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed,
-      eligendi explicabo? Quia vero id quo quis quidem recusandae cumque,
-      numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos
-      sequi ducimus.
+      <br /><br />
+       Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus
+      voluptates fugiat commodi quia sunt sint quam temporibus. Alias culpa
+      ipsam architecto ducimus nostrum voluptatibus itaque omnis provident, <span
+        class='font-bold text-red-700'>voluptatum</span
+      > laudantium necessitatibus minima! Quam consequuntur nesciunt unde animi!
+
+
+      <br /><br />
+       Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur!
+      Doloribus velit porro
+      <span class='font-bold text-red-700'>consectetur placeat</span> odio optio
+      officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa,
+      inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero
+      id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam
+      laboriosam sint molestias omnis quos sequi ducimus.
     </p>
   </div>
+  <div id='dadesInici' class='flex justify-center text-center xl:gap-12'>
+    <div class='w-32'>
+      <h2>Mostres</h2>
+      <p class='text-xl font-bold'>85</p>
+    </div>
+    <div class='w-32'>
+      <h2>Valoracions</h2>
+      <p class='text-xl font-bold'>1,2m</p>
+    </div>
+    <div class='w-32'>
+      <h2>Comentaris</h2>
+      <p class='text-xl font-bold'>50</p>
+    </div>
+  </div>
+  <div class='relative'>
+    <img
+      class='h-full'
+      src={srcRetrat}
+      alt='Retrat de na Hua'
+      title='Retrat de na Hua'
+    />
+    <div class='absolute bottom-0 right-0 translate-y-1/4'>
+      <img src={srcTraç} alt='Traç' title='Traç' />
+    </div>
+  </div>
 </div>
+<div class='mt-12 h-4 w-full bg-black'></div>
+
+<script>
+  function actualitzarDades() {
+    const textInici = document.querySelector('#textInici') as HTMLElement;
+    const separadorInici = document.querySelector(
+      '#separadorInici'
+    ) as SVGPathElement;
+    const dadesInici = document.querySelector('#dadesInici') as HTMLElement;
+
+    if (textInici && separadorInici && dadesInici) {
+      separadorInici.setAttribute(
+        'd',
+        `M0,0 V${textInici.offsetHeight} H${textInici.offsetWidth} v${dadesInici.offsetHeight*3}`
+      );
+    }
+  }
+  window.addEventListener('DOMContentLoaded', actualitzarDades);
+  window.addEventListener('resize', actualitzarDades);
+</script>

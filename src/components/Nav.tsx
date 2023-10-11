@@ -8,7 +8,6 @@ const Nav = () => {
   const [clicat, setClicat] = useState<boolean>(false);
   const srcAvatar: string = avatar.src;
   const maxXL: boolean = useMediaQuery('(max-width: 1280px)');
-  console.log(maxXL);
 
   return (
     <nav className='relative mx-8 mb-24 flex justify-between items-center pt-12 pb-6 font-medium md:mx-16 lg:mx-32'>
@@ -24,15 +23,13 @@ const Nav = () => {
       <div>
         <img src={srcAvatar} alt='avatar' />
       </div>
-
       <h1 className='text-lg font-bold'>
         <a href='/'>Hua</a>
       </h1>
-
       {maxXL && (
         <div
           onClick={() => setClicat(!clicat)}
-          className='space-y-1.5 cursor-pointer z-10'>
+          className='space-y-1.5 cursor-pointer z-20'>
           <motion.span
             animate={{
               rotateZ: clicat ? 45 : 0,
@@ -51,7 +48,6 @@ const Nav = () => {
             className='block h-0.5 w-4 bg-black'></motion.span>
         </div>
       )}
-
       {!maxXL && (
         <ul className='flex gap-12'>
           <li>
@@ -65,9 +61,8 @@ const Nav = () => {
           </li>
         </ul>
       )}
-
       {maxXL && clicat && (
-        <div className='fixed top-0 left-0 w-screen h-screen bg-white flex justify-center items-center'>
+        <div className='fixed top-0 left-0 w-screen bg-white h-screen flex justify-center items-center z-10'>
           <motion.ul
             variants={animacioNav}
             animate='visible'
