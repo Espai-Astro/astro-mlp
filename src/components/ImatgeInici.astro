@@ -1,0 +1,23 @@
+---
+interface Props {
+  srcRetrat: string;
+  srcTraç: string;
+  text: string;
+}
+const { srcRetrat, srcTraç, text } = Astro.props;
+---
+
+<div class='relative'>
+  <figure>
+    <img
+    class='mx-auto'
+    src={srcRetrat}
+    alt='Retrat de na Hua'
+    title='Retrat de na Hua'
+    />
+    <figcaption>{text}</figcaption>
+  </figure>
+  <div class='absolute bottom-0 right-0 translate-y-1/4'>
+    <img src={srcTraç} alt='Traç' title='Traç' />
+  </div>
+</div>

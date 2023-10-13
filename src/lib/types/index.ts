@@ -1,3 +1,3 @@
-import type { textIniciT } from './contingutTypes';
+import type { textIniciT, endPointT, postT } from './contingutTypes';
 
-export type { textIniciT };
+export type { textIniciT, endPointT, postT };

@@ -16,39 +16,6 @@
 </div>
 
 <script>
-  function incrementComptadors(
-    idComptador: 'mostres' | 'valoracions' | 'comentaris',
-    valorCorrent: number = 0,
-    valorFinal: number,
-    durada: number,
-    lletra: string = ''
-  ) {
-    return new Promise<void>((resolve) => {
-      let comptador = document.getElementById(idComptador) as HTMLElement;
-      let pasTemps = Math.abs(Math.floor(durada / valorFinal));
-      console.log(pasTemps);
-
-      let interval = setInterval(() => {
-        if (valorCorrent < valorFinal) {
-          valorCorrent++;
-          comptador.innerText = valorCorrent.toString() + lletra;
-        } else {
-          comptador.innerText = valorFinal.toString() + lletra;
-          clearInterval(interval);
-          resolve();
-        }
-      }, pasTemps);
-    });
-  }
-
-  async function dispararCompantadors() {
-    const promeses = [
-      incrementComptadors('mostres', 0, 85, 1500),
-      incrementComptadors('valoracions', 0, 550, 1500, 'k'),
-      incrementComptadors('comentaris', 0, 325, 1500),
-    ];
-    await Promise.allSettled(promeses);
-    console.log('Promeses ok');
-  }
-  dispararCompantadors();
+  import { dispararComptadors } from '../lib/utils/dispararComptadors';
+  dispararComptadors();
 </script>

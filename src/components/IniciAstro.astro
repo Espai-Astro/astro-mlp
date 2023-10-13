@@ -2,15 +2,20 @@
 import traç from '../assets/img/paint.png';
 import retrat from '../assets/img/main-portrait.jpg';
 import SeparadorInici from './SeparadorInici.astro';
-import DadesInici from './DadesInici.astro';
-
 import { textosInici } from '../lib/data';
 import TextosInici from './TextosInici.astro';
 //import TextosInici from './TextosInici.jsx';
+import DadesInici from './DadesInici.astro';
+import { fetchDades } from '../lib/utils/fetachDades';
+import { endPoints } from '../lib/data';
+import ImatgeInici from './ImatgeInici.astro';
 
 const srcRetrat: string = retrat.src;
 const srcTraç: string = traç.src;
 const classesClaus = 'font-bold text-red-500';
+const posts = endPoints.posts;
+const dades = await fetchDades(posts);
+const text = dades[0].body;
 ---
 
 <div class='relative flex flex-col gap-12 items-center justify-center'>
@@ -26,18 +31,8 @@ const classesClaus = 'font-bold text-red-500';
       classesClaus={classesClaus}
     /> -->
   </div>
-  <DadesInici />
-  <div class='relative'>
-    <img
-      class='h-full'
-      src={srcRetrat}
-      alt='Retrat de na Hua'
-      title='Retrat de na Hua'
-    />
-    <div class='absolute bottom-0 right-0 translate-y-1/4'>
-      <img src={srcTraç} alt='Traç' title='Traç' />
-    </div>
-  </div>
+  <DadesInici  />
+  <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç} text={text}/>
 
   <div class='mt-12 h-4 w-full bg-black'></div>
 </div>
