@@ -1,6 +1,6 @@
-import type { endPointT, postT } from '../types/contingutTypes';
+import type { postT } from '../types/contingutTypes';
 
-export const fetchDades = async (url: endPointT): Promise<postT[] | undefined> => {
+export const fetchDades = async (url: string): Promise<postT[] | undefined> => {
   try {
     const resposta = await fetch(url);
     const dades: postT[] = await resposta.json();

@@ -7,12 +7,12 @@ import { useState } from 'react';
 const Nav = () => {
   const [clicat, setClicat] = useState<boolean>(false);
   const srcAvatar: string = avatar.src;
-  const maxXL: boolean = useMediaQuery('(max-width: 1280px)');
+  const maxmd: boolean = useMediaQuery('(max-width: 1024px)');
 
   return (
-    <nav className='relative mx-8 mb-24 flex justify-between items-center pt-12 pb-6 font-medium md:mx-16 lg:mx-32'>
+    <nav className='relative pt-12 pb-6 mx-8 md:mx-12 lg:mx-16 mb-24 flex justify-between items-center  font-medium'>
       <svg
-        className='absolute bottom-0 right-1/2 translate-x-1/2'
+        className='absolute right-1/2 translate-x-1/2 bottom-0'
         width='250'
         height={4}
         viewBox='0 0 250 4'
@@ -23,15 +23,15 @@ const Nav = () => {
       <div>
         <img src={srcAvatar} alt='avatar' />
       </div>
-      <h1 className='text-lg font-bold'>
+      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-lg font-bold'>
         <a href='/'>Hua</a>
       </h1>
 
       {/* Hamburguesa */}
-      {maxXL && (
+      {maxmd && (
         <div
           onClick={() => setClicat(!clicat)}
-          className='space-y-1.5 cursor-pointer z-20'>
+          className='space-y-1.5 cursor-pointer z-50'>
           <motion.span
             animate={{
               rotateZ: clicat ? 45 : 0,
@@ -51,14 +51,14 @@ const Nav = () => {
         </div>
       )}
 
-      {/* Menu > XL */}
-      {!maxXL && (
-        <ul className='flex gap-12'>
+      {/* Menu > LG */}
+      {!maxmd && (
+        <ul className='flex gap-8 '>
           <li>
             <a href='/'>Inici</a>
           </li>
           <li>
-            <a href='/serveis'>Serveis</a>
+            <a href='/galeria'>Galeria</a>
           </li>
           <li>
             <a href='/contacte'>Contacte</a>
@@ -66,9 +66,9 @@ const Nav = () => {
         </ul>
       )}
 
-      {/* Menu < XL */}
-      {maxXL && clicat && (
-        <div className='fixed top-0 left-0 w-screen h-auto bg-white pt-16 pb-24 flex justify-center items-center z-10'>
+      {/* Menu < LG */}
+      {maxmd && clicat && (
+        <div className='fixed top-0 left-0 w-screen h-auto bg-white pt-16 pb-24 flex justify-center items-center z-40'>
           <motion.ul
             variants={animacioNav}
             animate='visible'
@@ -78,7 +78,7 @@ const Nav = () => {
               <a href='/'>Inici</a>
             </motion.li>
             <motion.li variants={animacioElementNav}>
-              <a href='/serveis'>Serveis</a>
+              <a href='/galeria'>Galeria</a>
             </motion.li>
             <motion.li variants={animacioElementNav}>
               <a href='/contacte'>Contacte</a>

@@ -1,4 +1,4 @@
-import { textosInici } from './contingutWeb';
-import { endPoints } from './endPoints';
+import { textosInici, galeria } from './contingutWeb';
+import { endPoints } from '../const/endPoints';
 
-export { textosInici, endPoints };
+export { textosInici, galeria, endPoints };

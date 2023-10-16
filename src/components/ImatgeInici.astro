@@ -7,17 +7,26 @@ interface Props {
 const { srcRetrat, srcTraç, text } = Astro.props;
 ---
 
-<div class='relative'>
+<div class='max-w-md'>
   <figure>
-    <img
-    class='mx-auto'
-    src={srcRetrat}
-    alt='Retrat de na Hua'
-    title='Retrat de na Hua'
-    />
-    <figcaption>{text}</figcaption>
+    <div class='relative'>
+      <img src={srcRetrat} alt='Retrat de na Hua' title='Retrat de na Hua' />
+      <div class='absolute -bottom-24 right-1/2 translate-x-1/2 w-11/12'>
+        <img src={srcTraç} alt='Traç' title='Traç' />
+      </div>
+    </div>
+    <figcaption class='m-5 first-letter'>{text}</figcaption>
   </figure>
-  <div class='absolute bottom-0 right-0 translate-y-1/4'>
-    <img src={srcTraç} alt='Traç' title='Traç' />
-  </div>
 </div>
+
+<style>
+  .first-letter::first-letter {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 0.25rem;
+    color: #b32f23;
+    line-height: normal;
+    vertical-align: baseline;
+  }
+</style>
