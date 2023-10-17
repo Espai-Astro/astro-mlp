@@ -12,6 +12,7 @@ export type postT = {
 };
 
 export type artT = {
+  id: number;
   src: string;
   alt: string;
   title: string;

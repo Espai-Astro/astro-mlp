@@ -1,4 +1,4 @@
-<svg class='absolute h-full w-full overflow-visible'>
+<svg class='absolute overflow-visible'>
   <defs>
     <linearGradient id='gradient' x1='0%' y1='0%' x2='100%' y2='0%'>
       <stop offset='0%' style={{ stopColor: '#DC3A2B', stopOpacity: 1 }}></stop>
@@ -6,8 +6,12 @@
       ></stop>
     </linearGradient>
   </defs>
-  <path id='separadorInici' fill='none' stroke='url(#gradient)' stroke-width='4'
-  ></path>
+  <path
+    id='separadorInici'
+    fill='none'
+    stroke='url(#gradient)'
+    stroke-width='4'
+    stroke-linecap='round'></path>
 </svg>
 
 <style>
@@ -24,18 +28,16 @@
 
 <script>
   function actualitzarDades() {
-    const textInici = document.querySelector('#textInici') as HTMLElement;
+    const textosInici = document.querySelector('#textosInici') as HTMLElement;
     const separadorInici = document.querySelector(
       '#separadorInici'
     ) as SVGPathElement;
     const dadesInici = document.querySelector('#dadesInici') as HTMLElement;
 
-    if (textInici && separadorInici && dadesInici) {
+    if (textosInici && separadorInici && dadesInici) {
       separadorInici.setAttribute(
         'd',
-        `M0,0 V${textInici.offsetHeight} H${textInici.offsetWidth} v${
-          dadesInici.offsetHeight * 3
-        }`
+        `M0 0 V${textosInici.offsetHeight} H${textosInici.offsetWidth} v${dadesInici.offsetHeight}`
       );
     }
 

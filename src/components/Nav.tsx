@@ -1,4 +1,4 @@
-import avatar from '../assets/img/avatar.png';
+import avatar from '../assets/img/avatar.jpeg';
 import { motion } from 'framer-motion';
 import { animacioNav, animacioElementNav } from '../lib/utils/animacionsNav';
 import { useMediaQuery } from '.././lib/hooks/useMediaQuery';
@@ -10,22 +10,18 @@ const Nav = () => {
   const maxmd: boolean = useMediaQuery('(max-width: 1024px)');
 
   return (
-    <nav className='relative pt-12 pb-6 mx-8 md:mx-12 lg:mx-16 mb-24 flex justify-between items-center  font-medium'>
-      <svg
-        className='absolute right-1/2 translate-x-1/2 bottom-0'
-        width='250'
-        height={4}
-        viewBox='0 0 250 4'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'>
-        <path d='M2 2L428 2' stroke='#282828' strokeLinecap='round' />
-      </svg>
+    <nav className='relative py-12 mx-8 md:mx-12 mb-20 flex justify-between items-center font-medium titol '>
       <div>
-        <img src={srcAvatar} alt='avatar' />
+        <img
+          className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24'
+          src={srcAvatar}
+          alt='avatar'
+        />
       </div>
-      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-lg font-bold'>
+      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-xl font-bold'>
         <a href='/'>Hua</a>
       </h1>
+      <div className='absolute bottom-0 right-1/2 translate-x-1/2 h-1 w-2/3 bg-neutral-800 rounded-xl '></div>
 
       {/* Hamburguesa */}
       {maxmd && (
@@ -53,7 +49,7 @@ const Nav = () => {
 
       {/* Menu > LG */}
       {!maxmd && (
-        <ul className='flex gap-8 '>
+        <ul className='flex flex-col items-end gap-x-8 gap-y-4 text-xs'>
           <li>
             <a href='/'>Inici</a>
           </li>
@@ -84,15 +80,6 @@ const Nav = () => {
               <a href='/contacte'>Contacte</a>
             </motion.li>
           </motion.ul>
-          <svg
-            className='absolute bottom-0 right-1/2 translate-x-1/2 -translate-y-6'
-            width='250'
-            height={4}
-            viewBox='0 0 250 4'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
-            <path d='M2 2L428 2' stroke='#282828' strokeLinecap='round' />
-          </svg>
         </div>
       )}
     </nav>

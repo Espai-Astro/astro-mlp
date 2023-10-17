@@ -2,6 +2,10 @@ import art1 from '../../assets/img/art1.jpg';
 import art2 from '../../assets/img/art2.jpg';
 import art3 from '../../assets/img/art3.jpg';
 import art4 from '../../assets/img/art4.jpg';
+import art5 from '../../assets/img/art5.jpg';
+import art6 from '../../assets/img/art6.jpg';
+import art7 from '../../assets/img/art7.jpg';
+import art8 from '../../assets/img/art8.jpeg';
 
 export const textosInici = [
   {
@@ -19,31 +23,75 @@ export const textosInici = [
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam sint molestias'],
   },
+
+  {
+    id: 3,
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
+    claus: ['recusandae cumque', 'blanditiis'],
+  },
 ];
 
 export const galeria = [
   {
+    id: 1,
     src: art1.src,
-    alt: 'Imatge art1',
-    title: 'Imatge art1',
-    descripcio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
+    alt: 'Forexus limitrum',
+    title: 'Forexus limitrum',
+    descripcio:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
   },
   {
+    id: 2,
+    src: art5.src,
+    alt: 'Altea bonus est finumintis',
+    title: 'Altea bonus est finumintis',
+    descripcio:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
+  },
+  { 
+    id:3,
+    src: art6.src,
+    alt: 'Arceha nantis relimins',
+    title: 'Arceha nantis relimins',
+    descripcio:
+      'Error consequuntur in minus non sunt nisi quasi. Minima dolorum.',
+  },
+  {
+    id: 4,
     src: art2.src,
-    alt: 'Imatge art2',
-    title: 'Imatge art2',
-    descripcio: 'Error consequuntur in minus non sunt nisi quasi. Minima dolorum.',
+    alt: 'Femina ultra sinumm munumin',
+    title: 'Femina ultra sinumm munumin',
+    descripcio:
+      'Error consequuntur in minus non sunt nisi quasi. Minima dolorum.',
   },
   {
+    id: 5,
     src: art3.src,
-    alt: 'Imatge art3',
-    title: 'Imatge art3',
-    descripcio: 'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
+    alt: 'Erma nentis',
+    title: 'Erma nentis',
+    descripcio:
+      'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
   },
   {
+    id: 6,
+    src: art7.src,
+    alt: 'Faestina burocratis',
+    title: 'Faestina burocratis',
+    descripcio:
+      'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
+  },
+  {
+    id:7,
+    src: art8.src,
+    alt: 'Sculpturismenium ananti versus',
+    title: 'Sculpturismenium ananti versus',
+    descripcio: 'corrupti quia quam, voluptate sunt praesentium adipisci.',
+  },
+  {
+    id: 8,
     src: art4.src,
-    alt: 'Imatge art4',
-    title: 'Imatge art4',
+    alt: 'Tenent fastcitis modernumae',
+    title: 'Tenent fastcitis modernumae',
     descripcio: 'corrupti quia quam, voluptate sunt praesentium adipisci.',
   },
 ];

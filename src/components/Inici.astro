@@ -7,7 +7,6 @@ import TextosInici from './TextosInici.astro';
 //import TextosInici from './TextosInici.jsx';
 import DadesInici from './DadesInici.astro';
 import ImatgeInici from './ImatgeInici.astro';
-import type { postT } from '../lib/types';
 import { fetchDades } from '../lib/utils/fetachDades';
 
 const srcRetrat: string = retrat.src;
@@ -18,22 +17,25 @@ const dades = await fetchDades(posts);
 let text: string = dades && dades.length > 0 ? dades[0].body : '';
 ---
 
-<div class='relative flex flex-col items-center justify-center gap-12'>
-  <h1 class='text-4xl text-center'>
-    Entra a l'encantador <span class='font-bold'>món digital</span> de na Hua
+<div
+  class='flex flex-col items-center justify-center gap-12 px-4 md:px-12 lg:px-20'>
+  <h1 class='px-2 text-2xl sm:text-3xl lg:text-4xl lg:text-center'>
+    Entra a l'encantador <span class='font-bold text-red-500'>món digital</span> de na Hua
   </h1>
-  <div class='relative'>
-    <SeparadorInici />
-    <TextosInici textosInici={textosInici} classesClaus={classesClaus} />
-    <!-- <TextosInici
-      client:load
-      textosInici={textosInici}
-      classesClaus={classesClaus}
-    /> -->
-  </div>
-  <div class='flex flex-col items-center justify-center gap-12 px-6'>
-    <DadesInici />
-    <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç} text={text} />
+  <div class='flex flex-col xl:flex-row gap-12'>
+    <div class='relative xl:flex-auto xl:w-2/3'>
+      <SeparadorInici />
+      <TextosInici textosInici={textosInici} classesClaus={classesClaus} />
+      <DadesInici />
+      <!-- <TextosInici
+        client:load
+        textosInici={textosInici}
+        classesClaus={classesClaus}
+      /> -->
+    </div>
+    <div class='xl:flex-auto xl:w-1/3 flex flex-col items-center justify-center px-6'>
+      <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç} text={text} />
+    </div>
   </div>
 
   <div class='h-2 w-full bg-black'></div>
