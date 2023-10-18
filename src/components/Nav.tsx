@@ -10,16 +10,18 @@ const Nav = () => {
   const maxmd: boolean = useMediaQuery('(max-width: 1024px)');
 
   return (
-    <nav className='relative py-12 mx-8 md:mx-12 mb-20 flex justify-between items-center font-medium titol '>
+    <nav className='bg-zinc-200 rounded-b-2xl relative py-12 px-8 pd:mx-12 mb-20 flex justify-between items-center font-medium titol'>
       <div>
-        <img
-          className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24'
-          src={srcAvatar}
-          alt='avatar'
-        />
+        <a href='/'>
+          <img
+            className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24'
+            src={srcAvatar}
+            alt='avatar'
+          />
+        </a>
       </div>
       <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-xl font-bold'>
-        <a href='/'>Hua</a>
+        Hua
       </h1>
       <div className='absolute bottom-0 right-1/2 translate-x-1/2 h-1 w-2/3 bg-neutral-800 rounded-xl '></div>
 
@@ -27,7 +29,7 @@ const Nav = () => {
       {maxmd && (
         <div
           onClick={() => setClicat(!clicat)}
-          className='space-y-1.5 cursor-pointer z-50'>
+          className='space-y-1.5 cursor-pointer z-30'>
           <motion.span
             animate={{
               rotateZ: clicat ? 45 : 0,
@@ -49,14 +51,14 @@ const Nav = () => {
 
       {/* Menu > LG */}
       {!maxmd && (
-        <ul className='flex flex-col items-end gap-x-8 gap-y-4 text-xs'>
-          <li>
+        <ul className='flex flex-col items-end gap-x-8 gap-y-3 text-sm'>
+          <li className='duration-200 hover:font-bold hover:scale-110'>
             <a href='/'>Inici</a>
           </li>
-          <li>
+          <li className='duration-200 hover:font-bold hover:scale-110'>
             <a href='/galeria'>Galeria</a>
           </li>
-          <li>
+          <li className='duration-200 hover:font-bold hover:scale-110'>
             <a href='/contacte'>Contacte</a>
           </li>
         </ul>
@@ -64,22 +66,30 @@ const Nav = () => {
 
       {/* Menu < LG */}
       {maxmd && clicat && (
-        <div className='fixed top-0 left-0 w-screen h-auto bg-white pt-16 pb-24 flex justify-center items-center z-40'>
+        <div
+          className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl py-20 z-20'>
           <motion.ul
             variants={animacioNav}
             animate='visible'
             initial='hidden'
-            className='flex flex-col justify-center items-center gap-24 text-lg '>
-            <motion.li variants={animacioElementNav}>
+            className='flex flex-col gap-24 text-lg '>
+            <motion.li
+              variants={animacioElementNav}
+              className='duration-200 hover:font-bold hover:scale-110'>
               <a href='/'>Inici</a>
             </motion.li>
-            <motion.li variants={animacioElementNav}>
+            <motion.li
+              variants={animacioElementNav}
+              className='duration-200 hover:font-bold hover:scale-110'>
               <a href='/galeria'>Galeria</a>
             </motion.li>
-            <motion.li variants={animacioElementNav}>
+            <motion.li
+              variants={animacioElementNav}
+              className='duration-200 hover:font-bold hover:scale-110'>
               <a href='/contacte'>Contacte</a>
             </motion.li>
           </motion.ul>
+          <div className='absolute bottom-0 right-1/2 translate-x-1/2 h-1 w-2/3 bg-neutral-800 rounded-xl '></div>
         </div>
       )}
     </nav>

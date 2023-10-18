@@ -8,7 +8,7 @@ interface Props {
 const { textosInici, classesClaus } = Astro.props;
 ---
 
-<div id='textosInici' class='p-4 pb-8 sm:px-8 sm:text-lg flex flex-col gap-6'>
+<div id='textosInici' class='p-4 pb-8 sm:px-8 sm:text-lg flex flex-col gap-6 text-justify'>
   {
     textosInici.map(({ text, claus }) => {
       if (claus && claus.length > 0) {

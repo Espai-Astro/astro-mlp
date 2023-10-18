@@ -8,15 +8,20 @@ const { srcRetrat, srcTraç, text } = Astro.props;
 ---
 
 <div class='max-w-md'>
-  <di class='flex flex-col gap-12 sm:gap-20'>
+  <figure class='flex flex-col gap-12 sm:gap-20'>
     <div class='relative'>
-      <img src={srcRetrat} alt='Retrat de na Hua' title='Retrat de na Hua' />
+      <img
+        src={srcRetrat}
+        alt='Retrat de na Hua'
+        title='Retrat de na Hua'
+        class='rounded-xl'
+      />
       <div class='absolute -bottom-1/4 right-1/2 translate-x-1/2 w-11/12'>
         <img src={srcTraç} alt='Traç' title='Traç' />
       </div>
     </div>
     <figcaption class='text-xs leading-loose first-letter'>{text}</figcaption>
-  </di>
+  </figure>
 </div>
 
 <style>
