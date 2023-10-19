@@ -10,7 +10,7 @@ const Nav = () => {
   const maxmd: boolean = useMediaQuery('(max-width: 1024px)');
 
   return (
-    <nav className='bg-stone-200 rounded-b-2xl border-t-4 border-t-black relative py-12 px-8 mb-20 flex justify-between items-center font-medium titol'>
+    <nav className='bg-neutral-200 rounded-b-2xl border-t-4 border-t-black relative py-12 px-8 mb-20 flex justify-between items-center font-medium titol'>
       <div>
         <a href='/'>
           <img
@@ -66,7 +66,7 @@ const Nav = () => {
       {/* Menu < LG */}
       {maxmd && clicat && (
         <div className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 py-12 z-20'>
-          <div className='flex flex-col'>          
+          <div className='flex flex-col'>
             <div>
               <a href='/'>
                 <img
