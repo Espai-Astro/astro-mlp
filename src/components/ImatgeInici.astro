@@ -8,7 +8,7 @@ const { srcRetrat, srcTraç, text } = Astro.props;
 ---
 
 <div class='max-w-md'>
-  <figure class='flex flex-col gap-12 sm:gap-20'>
+  <figure class='flex flex-col gap-16 sm:gap-20'>
     <div class='relative'>
       <img
         src={srcRetrat}
@@ -20,7 +20,7 @@ const { srcRetrat, srcTraç, text } = Astro.props;
         <img src={srcTraç} alt='Traç' title='Traç' />
       </div>
     </div>
-    <figcaption class='text-xs leading-loose first-letter'>{text}</figcaption>
+    <figcaption class='text-xs px-4 leading-loose first-letter'>{text}</figcaption>
   </figure>
 </div>
 

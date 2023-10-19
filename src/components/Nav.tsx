@@ -10,20 +10,19 @@ const Nav = () => {
   const maxmd: boolean = useMediaQuery('(max-width: 1024px)');
 
   return (
-    <nav className='bg-zinc-200 rounded-b-2xl relative py-12 px-8 pd:mx-12 mb-20 flex justify-between items-center font-medium titol'>
+    <nav className='bg-stone-200 rounded-b-2xl border-t-4 border-t-black relative py-12 px-8 mb-20 flex justify-between items-center font-medium titol'>
       <div>
         <a href='/'>
           <img
-            className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24'
+            className='rounded-full w-12 md:w-16 xl:w-24'
             src={srcAvatar}
             alt='avatar'
           />
         </a>
       </div>
-      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-xl font-bold'>
+      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-2xl font-bold'>
         Hua
       </h1>
-      <div className='absolute bottom-0 right-1/2 translate-x-1/2 h-1 w-2/3 bg-neutral-800 rounded-xl '></div>
 
       {/* Hamburguesa */}
       {maxmd && (
@@ -66,30 +65,41 @@ const Nav = () => {
 
       {/* Menu < LG */}
       {maxmd && clicat && (
-        <div
-          className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl py-20 z-20'>
-          <motion.ul
-            variants={animacioNav}
-            animate='visible'
-            initial='hidden'
-            className='flex flex-col gap-24 text-lg '>
-            <motion.li
-              variants={animacioElementNav}
-              className='duration-200 hover:font-bold hover:scale-110'>
-              <a href='/'>Inici</a>
-            </motion.li>
-            <motion.li
-              variants={animacioElementNav}
-              className='duration-200 hover:font-bold hover:scale-110'>
-              <a href='/galeria'>Galeria</a>
-            </motion.li>
-            <motion.li
-              variants={animacioElementNav}
-              className='duration-200 hover:font-bold hover:scale-110'>
-              <a href='/contacte'>Contacte</a>
-            </motion.li>
-          </motion.ul>
-          <div className='absolute bottom-0 right-1/2 translate-x-1/2 h-1 w-2/3 bg-neutral-800 rounded-xl '></div>
+        <div className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 py-12 z-20'>
+          <div className='flex flex-col'>          
+            <div>
+              <a href='/'>
+                <img
+                  className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24'
+                  src={srcAvatar}
+                  alt='avatar'
+                />
+              </a>
+            </div>
+            <div>
+              <motion.ul
+                variants={animacioNav}
+                animate='visible'
+                initial='hidden'
+                className='flex flex-col gap-24 text-lg '>
+                <motion.li
+                  variants={animacioElementNav}
+                  className='duration-200 hover:font-bold hover:scale-110'>
+                  <a href='/'>Inici</a>
+                </motion.li>
+                <motion.li
+                  variants={animacioElementNav}
+                  className='duration-200 hover:font-bold hover:scale-110'>
+                  <a href='/galeria'>Galeria</a>
+                </motion.li>
+                <motion.li
+                  variants={animacioElementNav}
+                  className='duration-200 hover:font-bold hover:scale-110'>
+                  <a href='/contacte'>Contacte</a>
+                </motion.li>
+              </motion.ul>
+            </div>
+          </div>
         </div>
       )}
     </nav>

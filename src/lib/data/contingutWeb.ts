@@ -7,6 +7,9 @@ import art6 from '../../assets/img/art6.jpg';
 import art7 from '../../assets/img/art7.jpg';
 import art8 from '../../assets/img/art8.jpeg';
 
+import x from '../../assets/img/twitter.png';
+import youtube from '../../assets/img/youtube.png';
+
 export const textosInici = [
   {
     id: 1,
@@ -95,3 +98,20 @@ export const galeria = [
     descripcio: 'corrupti quia quam, voluptate sunt praesentium adipisci.',
   },
 ];
+
+export const xxss = [
+  {
+    id: 1,
+    nom: 'X',
+    src: x.src,
+    alt: 'X',
+    title: 'X',
+  },
+  {
+    id: 2,
+    nom: 'Youtube',
+    src: youtube.src,
+    alt: 'Youtube',
+    title: 'Youtube',
+  }
+]

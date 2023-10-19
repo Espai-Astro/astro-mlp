@@ -1,0 +1,40 @@
+---
+import type { xsT } from '../lib/types';
+import { xxss } from '../lib/data';
+
+const xarxes: xsT[] = xxss;
+---
+
+<div
+  class='bg-stone-200 rounded-t-2xl border-b-4 border-black pt-8 pb-6 px-10 mt-40 flex flex-col xl:flex-row justify-between gap-9 xl:gap-16'>
+  <div class='flex flex-col sm:flex-row xl:flex-col items-start gap-2 sm:gap-9 xl:gap-2'>
+    <h3 class='tracking-wider text-lg font-thin text-red-500'>
+      <span class='trackind-widest text-2xl uppercase'>Hua</span> Ling Huangai
+    </h3>
+    <div>
+      <a href='#' class='block font-bold underline sm:pt-2 pb-1 xl:pt-0 text-sm'
+        >hualing@hauartwork.com</a
+      >
+      <ul class='flex gap-2'>
+        {
+          xarxes.map(({ src, alt, title }) => (
+            <li>
+              <a href='#'>
+                <img src={src} alt={alt} title={title} />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  <p class='self-end leading-5 text-sm text-justify italic xl:pt-10'>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, ipsum
+    tempore. Magni laboriosam vero aperiam non, ullam ut hic dolor saepe
+    eligendi accusantium quasi! Delectus quod saepe cumque, consequuntur ea
+    dignissimos possimus sed quos harum laborum quas ex rerum odio.
+    Voluptatibus, omnis. &nbsp;- &nbsp;<span class='text-red-500 font-bold'
+      >Hua Ling &copy;2020</span
+    >
+  </p>
+</div>

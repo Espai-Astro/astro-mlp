@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav';
 
 interface Props {
@@ -16,14 +17,17 @@ console.info('Càrrega Layout');
     <meta name='generator' content={Astro.generator} />
     <title>{titol}</title>
   </head>
-  <body class='bg-neutral-100'>
-    <div class='container mx-auto px-4 xl:px-12 text-neutral-800'>
+  <body class='bg-stone-300'>
+    <div class='container mx-auto my-4 px-4 xl:px-12 text-neutral-800'>
       <header class=''>
         <Nav client:load />
       </header>
       <main>
         <slot />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
     <style is:global>
       * {
@@ -47,7 +51,7 @@ console.info('Càrrega Layout');
         font-weight: lighter;
         color: rgb(239 68 68);
         text-transform: uppercase;
-        letter-spacing: 0.75rem;
+        letter-spacing: 0.5rem;
       }
     </style>
   </body>

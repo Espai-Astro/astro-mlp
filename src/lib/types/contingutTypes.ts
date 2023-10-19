@@ -18,3 +18,11 @@ export type artT = {
   title: string;
   descripcio: string;
 };
+
+export type xsT = {
+  id: number;
+  nom: string;
+  src: string;
+  alt: string;
+  title: string;
+}

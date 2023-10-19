@@ -22,7 +22,7 @@ let text: string = dades && dades.length > 0 ? dades[0].body : '';
   <h1 class='px-2 text-2xl sm:text-3xl lg:text-4xl lg:text-center'>
     Entra a l'encantador <span class='font-bold text-red-500'>món digital</span> de na Hua
   </h1>
-  <div class='flex flex-col xl:flex-row gap-12'>
+  <div class='flex flex-col xl:flex-row gap-3'>
     <div class='relative xl:flex-auto xl:w-2/3'>
       <SeparadorInici />
       <TextosInici textosInici={textosInici} classesClaus={classesClaus} />
@@ -37,6 +37,4 @@ let text: string = dades && dades.length > 0 ? dades[0].body : '';
       <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç} text={text} />
     </div>
   </div>
-
-  <div class='h-2 w-full bg-black'></div>
 </div>
