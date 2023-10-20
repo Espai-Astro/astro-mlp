@@ -26,11 +26,94 @@ export const textosInici = [
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam sint molestias'],
   },
-
   {
-    id: 3,
+    id: 4,
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
     claus: ['recusandae cumque', 'blanditiis'],
+  },
+];
+
+export const textosBiografia = [
+  {
+    id: 1,
+    anys: ['1980', '1985'],
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
+    claus: ['accusamus', 'voluptates fugiat'],
+  },
+  {
+    id: 2,
+
+    anys: ['1986', '1999'],
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed',
+    claus: [
+      'quidem blanditiis',
+      'eligendi explicabo?',
+      'laboriosam sint molestias',
+    ],
+  },
+  {
+    id: 3,
+    anys: ['2000', '2002'],
+    text: 'Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. Alias culpa ipsam architecto ducimus nostrum voluptatibus itaque omnis provident.',
+    claus: ['Sed maiores', 'Alias culpa ipsam'],
+  },
+  {
+    id: 4,
+    anys: ['2003', '2006'],
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
+    claus: [
+      'ab animi rerum',
+      'eligendi explicabo?',
+      'laboriosam sint molestias',
+    ],
+  },
+  {
+    id: 5,
+    anys: ['2006', '2007'],
+    text: 'Laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
+    claus: ['deleniti qui?', 'temporibus'],
+  },
+  {
+    id: 6,
+    anys: ['2008', '2011'],
+    text: 'Tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
+    claus: ['laborum sed', 'laboriosam sint molestias'],
+  },
+  {
+    id: 7,
+    anys: ['2011', '2012'],
+    text: 'Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
+    claus: ['molestiae', 'recusandae cumque', 'numquam'],
+  },
+  {
+    id: 8,
+    anys: ['2012', '2018'],
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed.',
+    claus: ['tempora id molestiae', 'beatae animi'],
+  },
+  {
+    id: 9,
+    anys: ['2019', '2020'],
+    text: 'Dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
+    claus: ['voluptatem', 'ab quibusdam', 'omnis quos'],
+  },
+  {
+    id: 10,
+    anys: ['2021', '2022'],
+    text: 'Quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
+    claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam sint molestias'],
+  },
+  {
+    id: 11,
+    anys: ['2022', '2023'],
+    text: 'Quidem blanditiis, accusamus vero ab animi rerum consequuntur!. Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. ',
+    claus: ['accusamus vero', 'recusandae', 'laboriosam sint molestias'],
+  },
+  {
+    id: 12,
+    anys: ['2023', '-'],
+    text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
+    claus: ['dolorem', 'recusandae cumque', 'omnis quos'],
   },
 ];
 
@@ -51,8 +134,8 @@ export const galeria = [
     descripcio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
   },
-  { 
-    id:3,
+  {
+    id: 3,
     src: art6.src,
     alt: 'Arceha nantis relimins',
     title: 'Arceha nantis relimins',
@@ -84,7 +167,7 @@ export const galeria = [
       'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
   },
   {
-    id:7,
+    id: 7,
     src: art8.src,
     alt: 'Sculpturismenium ananti versus',
     title: 'Sculpturismenium ananti versus',
@@ -113,5 +196,5 @@ export const xxss = [
     src: youtube.src,
     alt: 'Youtube',
     title: 'Youtube',
-  }
-]
+  },
+];

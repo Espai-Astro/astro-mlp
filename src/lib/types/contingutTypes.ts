@@ -4,6 +4,13 @@ export type textIniciT = {
   claus: string[];
 };
 
+export type textBioT = {
+  id: number;
+  amys: string[];
+  text: string;
+  claus: string[];
+}
+
 export type postT = {
   userId: number;
   id: number;

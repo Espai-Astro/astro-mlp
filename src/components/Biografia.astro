@@ -1,14 +1,14 @@
 ---
 import gargot from '../assets/svg/scribble.svg';
+import TextosBiografia from './TextosBiografia.astro';
+import { textosBiografia } from '../lib/data';
 const srcGargot = gargot.src;
 ---
 
 <div class='flex flex-col gap-20 px-6'>
   <div class='flex flex-col lg:flex-row lg:gap-3'>
     <h1 class='titol'>Biografia</h1>
-    <img src={srcGargot} class='' alt='gargot' />
+    <img src={srcGargot} class='ombra' alt='gargot' />
   </div>
+  <TextosBiografia textosBiografia={textosBiografia} />
 </div>
-
-
-
