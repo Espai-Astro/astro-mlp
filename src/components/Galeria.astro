@@ -2,16 +2,17 @@
 import { galeria } from '../lib/data';
 import type { artT } from '../lib/types';
 
-import gargot from '../assets/svg/scribble.svg'
+import gargot from '../assets/svg/scribble.svg';
 const srcGargot = gargot.src;
 ---
 
 <div class='flex flex-col gap-20 px-6'>
-  <div class="flex flex-col lg:flex-row lg:gap-3">
+  <div class='flex flex-col lg:flex-row lg:gap-3'>
     <h1 class='titol'>Galeria</h1>
-    <img src={srcGargot} class="" alt="gargot">
+    <img src={srcGargot} class='' alt='gargot' />
   </div>
-  <div class='grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-20'>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim minima at necessitatibus accusantium quia. Suscipit magni quia et ipsam. Inventore sed consequatur, quos omnis magni sint cum ab eligendi at numquam natus excepturi consectetur quibusdam, dolorum aut fugiat rem doloremque.</p>
+  <div class='grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-20 grid'>
     {
       galeria.map(({ src, alt, title, descripcio }: artT) => (
         <div class='group'>
@@ -22,7 +23,8 @@ const srcGargot = gargot.src;
               alt={alt}
               title={title}
             />
-            <div class='absolute left-0 top-0 w-full h-full bg-black rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4' /></div>
+            <div class='absolute left-0 top-0 w-full h-full bg-black rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4' />
+          </div>
           <div class='px-2 py-4 transition-all  duration-300 group-hover:translate-y-3 group-hover:translate-x-2'>
             <p class='font-semibold text-red-500 uppercase'>{title}</p>
             <p class='transition-all duration-1000 opacity-0 group-hover:opacity-100 px-2 text-sm'>
@@ -32,5 +34,5 @@ const srcGargot = gargot.src;
         </div>
       ))
     }
-</div>
+  </div>
 </div>

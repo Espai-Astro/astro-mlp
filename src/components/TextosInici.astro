@@ -8,9 +8,11 @@ interface Props {
 const { textosInici, classesClaus } = Astro.props;
 ---
 
-<div id='textosInici' class='p-4 pb-8 sm:px-10 sm:text-lg flex flex-col gap-6 text-justify'>
+<div
+  id='textosInici'
+  class='p-4 pb-8 sm:px-10 sm:text-lg flex flex-col gap-6 text-justify first-letter'>
   {
-    textosInici.map(({ text, claus }) => {
+    textosInici.map(({ text, claus }, index) => {
       if (claus && claus.length > 0) {
         claus
           .filter((clau) => text.includes(clau))
@@ -18,6 +20,8 @@ const { textosInici, classesClaus } = Astro.props;
             const htmlClau = ` <span class='${classesClaus}'>${clau}</span> `;
             text = text.replace(clau, htmlClau);
           });
+
+        if (index === 0) return <p class='first-letter' set:html={text} />;
         return <p set:html={text} />;
       }
       return <p>{text}</p>;

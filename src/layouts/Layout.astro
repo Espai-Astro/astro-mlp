@@ -16,11 +16,18 @@ console.info('Càrrega Layout');
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>{titol}</title>
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Karla&family=Merriweather+Sans&display=swap'
+      rel='stylesheet'
+    />
   </head>
+
   <body class='bg-neutral-300'>
     <div class='container mx-auto my-4 px-4 xl:px-12 text-neutral-800'>
-      <header class=''>
-        <Nav client:load />
+      <header>
+        <Nav client:load/>
       </header>
       <main>
         <slot />
@@ -41,8 +48,14 @@ console.info('Càrrega Layout');
       }
 
       body {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-          sans-serif;
+        font-family: 'Merriweather Sans', sans-serif;
+      }
+
+      h1,
+      h2,
+      h3,
+      a {
+        font-family: 'Karla', sans-serif;
       }
 
       .titol {
@@ -52,6 +65,16 @@ console.info('Càrrega Layout');
         color: rgb(239 68 68);
         text-transform: uppercase;
         letter-spacing: 0.5rem;
+      }
+
+      .first-letter::first-letter {
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 2rem;
+        margin-right: 0.3rem;
+        line-height: 28px;
+        color: rgb(239 68 68);
+        vertical-align: baseline;
       }
     </style>
   </body>
