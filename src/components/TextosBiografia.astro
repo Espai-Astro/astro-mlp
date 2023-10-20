@@ -1,0 +1,32 @@
+---
+import type { textBiografiaT } from '../lib/types';
+
+interface Props {
+  textosBiografia: textBiografiaT[];
+  classesClaus: string;
+}
+const { textosBiografia, classesClaus } = Astro.props;
+---
+
+<div>
+  {
+    textosBiografia.map(({ anys, text, claus }, index) => {
+      if (claus && claus.length > 0) {
+        claus
+          .filter((clau) => text.includes(clau))
+          .forEach((clau) => {
+            const htmlClau = ` <span class='${classesClaus}'>${clau}</span> `;
+            text = text.replace(clau, htmlClau);
+          });
+
+        return (
+				<div class="flex gap-6">
+					<p class="w-28">{anys[0]} - {anys[1]}</p>
+					<p class="w-full" set:html={text} />
+				</div>
+					);
+      }
+      return <p>{text}</p>;
+    })
+  }
+</div>

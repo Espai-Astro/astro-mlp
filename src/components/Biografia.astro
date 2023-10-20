@@ -3,6 +3,7 @@ import gargot from '../assets/svg/scribble.svg';
 import TextosBiografia from './TextosBiografia.astro';
 import { textosBiografia } from '../lib/data';
 const srcGargot = gargot.src;
+const classesClaus = 'font-bold text-red-500';
 ---
 
 <div class='flex flex-col gap-20 px-6'>
@@ -10,5 +11,6 @@ const srcGargot = gargot.src;
     <h1 class='titol'>Biografia</h1>
     <img src={srcGargot} class='ombra' alt='gargot' />
   </div>
-  <TextosBiografia textosBiografia={textosBiografia} />
+  <TextosBiografia textosBiografia={textosBiografia} classesClaus={classesClaus} 
+  />
 </div>

@@ -4,9 +4,9 @@ export type textIniciT = {
   claus: string[];
 };
 
-export type textBioT = {
+export type textBiografiaT = {
   id: number;
-  amys: string[];
+  anys: string[];
   text: string;
   claus: string[];
 }
