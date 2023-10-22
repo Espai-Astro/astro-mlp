@@ -8,9 +8,10 @@ interface Props {
 const { textosBiografia, classesClaus } = Astro.props;
 ---
 
-<div>
+<div
+  class='flex flex-col gap-16 py-4 px-8 lg:py-12 lg:px-20 border-zinc-200 rounded-xl border-2'>
   {
-    textosBiografia.map(({ anys, text, claus }, index) => {
+    textosBiografia.map(({ src, anys, titol, text, claus }, index) => {
       if (claus && claus.length > 0) {
         claus
           .filter((clau) => text.includes(clau))
@@ -20,11 +21,34 @@ const { textosBiografia, classesClaus } = Astro.props;
           });
 
         return (
-				<div class="flex gap-6">
-					<p class="w-28">{anys[0]} - {anys[1]}</p>
-					<p class="w-full" set:html={text} />
-				</div>
-					);
+          <div class='flex flex-col gap-6'>
+            <div class='flex flex-col sm:flex-row gap-1 sm:gap-4 items-baseline'>
+              <span class='italic text-2xl'>{titol}</span>
+              <span class=' text-red-500 text-md '>
+                ({anys[0]} - {anys[1]})
+              </span>
+            </div>
+            <div class='lg:flex lg:flex-row lg:gap-1'>
+              <img
+                src={src}
+                alt={`Imatge ${titol}`}
+                title={`Imatge ${titol}`}
+                class={`object-contain h-60 lg:px-8 pb-4 lg:m-0 mx-auto lg:float-none ${
+                  index % 2 === 0
+                    ? 'lg:order-1 sm:float-right sm:pl-8 sm:pr-2'
+                    : 'lg:order-0 sm:float-left sm:pl-2 sm:pr-8'
+                }`}
+              />
+              <p
+                class='w-full pt-4 break-words text-justify first-letter text-md leading-relaxed'
+                set:html={text}
+              />
+            </div>
+            {index !== textosBiografia.length - 1 && (
+              <div class='border-2 rounded-xl bg-zinc-200 w-1/2 mx-auto' />
+            )}
+          </div>
+        );
       }
       return <p>{text}</p>;
     })

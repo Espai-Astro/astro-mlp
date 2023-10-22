@@ -6,7 +6,9 @@ export type textIniciT = {
 
 export type textBiografiaT = {
   id: number;
+  src: string;
   anys: string[];
+  titol: string;
   text: string;
   claus: string[];
 }

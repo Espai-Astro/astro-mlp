@@ -62,11 +62,11 @@ const Nav = () => {
       {/* Menu < LG */}
       {clicat && (
         <div className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 pt-12 pb-20 z-20'>
-          <div className='flex flex-col'>
+          <div className='flex flex-col gap-9'>
             <div>
               <a href='/'>
                 <img
-                  className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24  hover:scale-110'
+                  className='rounded-full border-2 border-black w-12 md:w-16 xl:w-24 hover:scale-110'
                   src={srcAvatar}
                   alt='avatar'
                 />

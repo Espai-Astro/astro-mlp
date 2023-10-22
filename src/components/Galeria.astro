@@ -6,13 +6,35 @@ import gargot from '../assets/svg/scribble.svg';
 const srcGargot = gargot.src;
 ---
 
-<div class='flex flex-col gap-20 px-6'>
+<div class='flex flex-col gap-14 px-6'>
   <div class='flex flex-col lg:flex-row lg:gap-3'>
     <h1 class='titol'>Galeria</h1>
     <img src={srcGargot} class='' alt='gargot' />
   </div>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim minima at necessitatibus accusantium quia. Suscipit magni quia et ipsam. Inventore sed consequatur, quos omnis magni sint cum ab eligendi at numquam natus excepturi consectetur quibusdam, dolorum aut fugiat rem doloremque.</p>
-  <div class='grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-20 grid'>
+  <div
+    class='flex flex-col gap-6 p-6 mb-10 first-letter border-zinc-200 border-4 rounded-xl text-justify'>
+    <p class='first-letter'>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim minima
+      at necessitatibus accusantium quia. Suscipit magni quia et ipsam.
+      Inventore sed consequatur, quos omnis magni sint cum ab eligendi at
+      numquam natus excepturi consectetur quibusdam, dolorum aut fugiat rem
+      doloremque.
+    </p>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor odio sed
+      est enim consequatur dolorum vero cupiditate dignissimos corporis
+      adipisci! Recusandae illum enim unde voluptates ipsam ratione voluptate
+      tempore, dicta incidunt explicabo ut consequuntur in at doloremque minus
+      cum corporis praesentium? Autem doloribus asperiores, inventore quia ad
+      sunt expedita unde ab velit, laudantium aut, sint deleniti ex ut itaque
+      eos impedit repellendus quos recusandae? Dolore cupiditate sunt, sed qui
+      saepe, magnam enim voluptatibus iste consequuntur sequi nobis molestias
+      porro ut. Dicta unde ratione iusto, laboriosam quae tempore error commodi
+      doloremque eveniet molestiae adipisci nulla sit impedit veritatis dolorem
+      maxime totam.
+    </p>
+  </div>
+  <div class='grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid'>
     {
       galeria.map(({ src, alt, title, descripcio }: artT) => (
         <div class='group'>
@@ -23,7 +45,7 @@ const srcGargot = gargot.src;
               alt={alt}
               title={title}
             />
-            <div class='absolute left-0 top-0 w-full h-full bg-black rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4' />
+            <div class='absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4' />
           </div>
           <div class='px-2 py-4 transition-all  duration-300 group-hover:translate-y-3 group-hover:translate-x-2'>
             <p class='font-semibold text-red-500 uppercase'>{title}</p>

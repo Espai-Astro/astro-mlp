@@ -1,11 +1,24 @@
-import art1 from '../../assets/img/art1.jpg';
-import art2 from '../../assets/img/art2.jpg';
-import art3 from '../../assets/img/art3.jpg';
-import art4 from '../../assets/img/art4.jpg';
-import art5 from '../../assets/img/art5.jpg';
-import art6 from '../../assets/img/art6.jpg';
-import art7 from '../../assets/img/art7.jpg';
-import art8 from '../../assets/img/art8.jpeg';
+import art1 from '../../assets/img/art/art1.jpg';
+import art2 from '../../assets/img/art/art2.jpg';
+import art3 from '../../assets/img/art/art3.jpg';
+import art4 from '../../assets/img/art/art4.jpg';
+import art5 from '../../assets/img/art/art5.jpg';
+import art6 from '../../assets/img/art/art6.jpg';
+import art7 from '../../assets/img/art/art7.jpg';
+import art8 from '../../assets/img/art/art8.jpeg';
+
+import bio1 from '../../assets/img/biografia/bio1.jpg';
+import bio2 from '../../assets/img/biografia/bio2.jpg';
+import bio3 from '../../assets/img/biografia/bio3.jpg';
+import bio4 from '../../assets/img/biografia/bio4.jpg';
+import bio5 from '../../assets/img/biografia/bio5.jpg';
+import bio6 from '../../assets/img/biografia/bio6.jpg';
+import bio7 from '../../assets/img/biografia/bio7.jpg';
+import bio8 from '../../assets/img/biografia/bio8.jpg';
+import bio9 from '../../assets/img/biografia/bio9.jpg';
+import bio10 from '../../assets/img/biografia/bio10.jpg';
+import bio11 from '../../assets/img/biografia/bio11.jpg';
+import bio12 from '../../assets/img/biografia/bio12.jpg';
 
 import x from '../../assets/img/twitter.png';
 import youtube from '../../assets/img/youtube.png';
@@ -36,14 +49,17 @@ export const textosInici = [
 export const textosBiografia = [
   {
     id: 1,
+    src: bio1.src,
     anys: ['1980', '1985'],
+    titol: 'Voluptates fugiat',
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
     claus: ['accusamus', 'voluptates fugiat'],
   },
   {
     id: 2,
-
+    src: bio2.src,
     anys: ['1986', '1999'],
+    titol: 'Dolorem est',
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed',
     claus: [
       'quidem blanditiis',
@@ -53,13 +69,17 @@ export const textosBiografia = [
   },
   {
     id: 3,
+    src: bio3.src,
     anys: ['2000', '2002'],
+    titol: 'Lorem quidem blanditiis',
     text: 'Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. Alias culpa ipsam architecto ducimus nostrum voluptatibus itaque omnis provident.',
     claus: ['Sed maiores', 'Alias culpa ipsam'],
   },
   {
     id: 4,
+    src: bio4.src,
     anys: ['2003', '2006'],
+    titol: 'Quidem recusandae',
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: [
       'ab animi rerum',
@@ -69,49 +89,65 @@ export const textosBiografia = [
   },
   {
     id: 5,
+    src: bio5.src,
     anys: ['2006', '2007'],
+    titol: 'Commodi quia sunt',
     text: 'Laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
     claus: ['deleniti qui?', 'temporibus'],
   },
   {
     id: 6,
+    src: bio6.src,
     anys: ['2008', '2011'],
+    titol: 'Quibusdam',
     text: 'Tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['laborum sed', 'laboriosam sint molestias'],
   },
   {
     id: 7,
+    src: bio7.src,
     anys: ['2011', '2012'],
+    titol: 'Laborum sed',
     text: 'Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['molestiae', 'recusandae cumque', 'numquam'],
   },
   {
     id: 8,
+    src: bio8.src,
     anys: ['2012', '2018'],
+    titol: 'Consectetur placeat, codio',
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed.',
     claus: ['tempora id molestiae', 'beatae animi'],
   },
   {
     id: 9,
+    src: bio9.src,
     anys: ['2019', '2020'],
+    titol: 'Tenetur ab quibusdam',
     text: 'Dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['voluptatem', 'ab quibusdam', 'omnis quos'],
   },
   {
     id: 10,
+    src: bio10.src,
     anys: ['2021', '2022'],
+    titol: 'Voluptates',
     text: 'Quibusdam laboriosam sint molestias omnis quos sequi ducimus. Nesciunt natus corrupti iste deleniti qui? Sed maiores ipsum minus voluptates fugiat commodi quia sunt sint quam temporibus. ',
     claus: ['labore ipsa', 'eligendi explicabo?', 'laboriosam sint molestias'],
   },
   {
     id: 11,
+    src: bio11.src,
     anys: ['2022', '2023'],
+    titol: 'Quibusdam laboriosam sint',
     text: 'Quidem blanditiis, accusamus vero ab animi rerum consequuntur!. Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus. ',
     claus: ['accusamus vero', 'recusandae', 'laboriosam sint molestias'],
   },
   {
     id: 12,
-    anys: ['2023', '-'],
+    src: bio12.src,
+    anys: ['2023', 'Actualitat'],
+    titol: 'Recusandae',
     text: 'Enim quidem blanditiis, accusamus vero ab animi rerum consequuntur! Consectetur placeat, codio optio officia non nesciunt dolorem est beatae animi, voluptatem labore ipsa, inventore tempora id molestiae laborum sed, eligendi explicabo? Quia vero id quo quis quidem recusandae cumque, numquam et ad tenetur ab quibusdam laboriosam sint molestias omnis quos sequi ducimus.',
     claus: ['dolorem', 'recusandae cumque', 'omnis quos'],
   },
