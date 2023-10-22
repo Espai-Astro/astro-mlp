@@ -3,6 +3,7 @@ import { galeria } from '../lib/data';
 import type { artT } from '../lib/types';
 
 import gargot from '../assets/svg/scribble.svg';
+import Art from './Art.astro';
 const srcGargot = gargot.src;
 ---
 
@@ -35,26 +36,6 @@ const srcGargot = gargot.src;
     </p>
   </div>
   <div class='grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid'>
-    {
-      galeria.map(({ src, alt, title, descripcio }: artT) => (
-        <div class='group'>
-          <div class='relative'>
-            <img
-              class='relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3'
-              src={src}
-              alt={alt}
-              title={title}
-            />
-            <div class='absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4' />
-          </div>
-          <div class='px-2 py-4 transition-all  duration-300 group-hover:translate-y-3 group-hover:translate-x-2'>
-            <p class='font-semibold text-red-500 uppercase'>{title}</p>
-            <p class='transition-all duration-1000 opacity-0 group-hover:opacity-100 px-2 text-sm'>
-              {descripcio}
-            </p>
-          </div>
-        </div>
-      ))
-    }
+    {galeria.map((art: artT) => <Art art={art} />)}
   </div>
 </div>

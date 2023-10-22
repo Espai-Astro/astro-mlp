@@ -159,6 +159,8 @@ export const galeria = [
     src: art1.src,
     alt: 'Forexus limitrum',
     title: 'Forexus limitrum',
+    mida: '100 x 100',
+    tecnica: 'Adobe Photoshop',
     descripcio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
   },
@@ -167,6 +169,8 @@ export const galeria = [
     src: art5.src,
     alt: 'Altea bonus est finumintis',
     title: 'Altea bonus est finumintis',
+    mida: '100 x 200',
+    tecnica: 'Acrílic',
     descripcio:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, repellendus.',
   },
@@ -175,6 +179,8 @@ export const galeria = [
     src: art6.src,
     alt: 'Arceha nantis relimins',
     title: 'Arceha nantis relimins',
+    mida: '80 x 80',
+    tecnica: 'Témpera',
     descripcio:
       'Error consequuntur in minus non sunt nisi quasi. Minima dolorum.',
   },
@@ -183,6 +189,8 @@ export const galeria = [
     src: art2.src,
     alt: 'Femina ultra sinumm munumin',
     title: 'Femina ultra sinumm munumin',
+    mida: '200 x 100',
+    tecnica: 'Acrílic',
     descripcio:
       'Error consequuntur in minus non sunt nisi quasi. Minima dolorum.',
   },
@@ -191,6 +199,8 @@ export const galeria = [
     src: art3.src,
     alt: 'Erma nentis',
     title: 'Erma nentis',
+    mida: '100 x 100',
+    tecnica: 'Adobe Photoshop',
     descripcio:
       'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
   },
@@ -199,6 +209,8 @@ export const galeria = [
     src: art7.src,
     alt: 'Faestina burocratis',
     title: 'Faestina burocratis',
+    mida: '100 x 200',
+    tecnica: 'Llapis',
     descripcio:
       'Corrupti quia quam, voluptate sunt praesentium adipisci quasi nesciunt.',
   },
@@ -207,6 +219,8 @@ export const galeria = [
     src: art8.src,
     alt: 'Sculpturismenium ananti versus',
     title: 'Sculpturismenium ananti versus',
+    mida: '100 x 60',
+    tecnica: 'Carbonet',
     descripcio: 'corrupti quia quam, voluptate sunt praesentium adipisci.',
   },
   {
@@ -214,6 +228,8 @@ export const galeria = [
     src: art4.src,
     alt: 'Tenent fastcitis modernumae',
     title: 'Tenent fastcitis modernumae',
+    mida: '200 x 100',
+    tecnica: 'Témpera',
     descripcio: 'corrupti quia quam, voluptate sunt praesentium adipisci.',
   },
 ];

@@ -1,0 +1,32 @@
+---
+import type {artT} from '../lib/types';
+
+interface Props {
+	art: artT;
+}
+const { art: { id, src, alt, title, descripcio }} = Astro.props;
+---
+
+<div class='group'>
+  <div class='relative'>
+    <a href={`/galeria/art${id}`}>
+			<img
+				class='relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3'
+				src={src}
+				alt={alt}
+				title={title}
+			/>
+		</a>
+    <div
+      class='absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4'>
+    </div>
+  </div>
+  <div
+    class='px-2 py-4 transition-all duration-300 group-hover:translate-y-3 group-hover:translate-x-2'>
+    <p class='font-semibold text-red-500 uppercase'>{title}</p>
+    <p
+      class='transition-all duration-1000 opacity-0 group-hover:opacity-100 px-2 text-sm'>
+      {descripcio}
+    </p>
+  </div>
+</div>

@@ -11,7 +11,7 @@ export type textBiografiaT = {
   titol: string;
   text: string;
   claus: string[];
-}
+};
 
 export type postT = {
   userId: number;
@@ -25,6 +25,8 @@ export type artT = {
   src: string;
   alt: string;
   title: string;
+  mida: string;
+  tecnica: string;
   descripcio: string;
 };
 
@@ -34,4 +36,4 @@ export type xsT = {
   src: string;
   alt: string;
   title: string;
-}
+};
