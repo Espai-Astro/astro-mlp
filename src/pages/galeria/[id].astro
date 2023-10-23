@@ -4,10 +4,10 @@ import TargetaArt from '../../components/TargetaArt.astro';
 
 
 const { id: paramId } = Astro.params;
-const id = Number(paramId?.substring(3)) - 1;
-console.log('id -->', id);
+const idArt = Number(paramId?.substring(3)) - 1;
+console.log('idArt -->', idArt);
 ---
 
-<Layout titol={`Targeta Art${id + 1}`}>
-	<TargetaArt id={id} />
+<Layout titol={`Targeta Art${idArt + 1}`}>
+	<TargetaArt idArt={idArt} />
 </Layout>
