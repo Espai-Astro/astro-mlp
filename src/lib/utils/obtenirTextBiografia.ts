@@ -1,4 +1,3 @@
-import type { artT } from '../../lib/types';
 import type { textBiografiaT } from '../../lib/types';
 
 export const obtenirTextBiografia = (
