@@ -7,7 +7,7 @@ export type textIniciT = {
 export type textBiografiaT = {
   id: number;
   src: string;
-  anys: string[];
+  anys: number[];
   titol: string;
   text: string;
   claus: string[];
@@ -25,9 +25,11 @@ export type artT = {
   src: string;
   alt: string;
   title: string;
+  any: number;
   mida: string;
   tecnica: string;
   descripcio: string;
+  descripcioLlarga: string;
 };
 
 export type xsT = {

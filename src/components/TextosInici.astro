@@ -8,9 +8,7 @@ interface Props {
 const { textosInici, classesClaus } = Astro.props;
 ---
 
-<div
-  id='textosInici'
-  class='p-4 pb-8 sm:px-10 sm:text-lg flex flex-col gap-6 text-justify'>
+<div id='textosInici' class='p-4 pb-8 sm:px-10 sm:text-lg flex flex-col gap-6'>
   {
     textosInici.map(({ text, claus }, index) => {
       if (claus && claus.length > 0) {
@@ -22,7 +20,7 @@ const { textosInici, classesClaus } = Astro.props;
           });
 
         if (index === 0)
-          return <p class='first-letter leading-relaxed' set:html={text} />;
+          return <p class='first-letter' set:html={text} />;
         return <p class='leading-relaxed' set:html={text} />;
       }
       return <p class='leading-relaxed'>{text}</p>;

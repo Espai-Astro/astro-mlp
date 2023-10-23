@@ -1,0 +1,67 @@
+---
+import { galeria } from '../lib/data/index';
+import { textosBiografia } from '../lib/data/index';
+
+import type { artT } from '../lib/types';
+import type { textBiografiaT } from '../lib/types';
+
+const { id } = Astro.props;
+console.log(id);
+let src, alt, title, any, mida, tecnica, descripcio, descripcioLlarga;
+if (id >= -1 && id < galeria.length) {
+  const targeta: artT = galeria[id];
+  ({ src, alt, title, any, mida, tecnica, descripcio, descripcioLlarga } =
+    targeta);
+}
+
+const obtenirTextBiografia = (any: number) => {
+  const textBiografia = textosBiografia.find(
+    (textBiografia: textBiografiaT) =>
+      textBiografia.anys[0] <= any && textBiografia.anys[1] >= any
+  );
+  if (textBiografia) {
+    console.log(textBiografia.titol);
+    return textBiografia;
+  }
+};
+obtenirTextBiografia(any);
+---
+
+<div class='flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl'>
+  <div class='flex flex-col gap-6 lg:gap-3'>
+    <div class='flex flex-col lg:flex-row gap-3 items-baseline'>
+      <p class='text-red-500 text-3xl uppercase'>{title}</p>
+      <span class='text-xl font-thin'> ({any})</span>
+    </div>
+    <p>{descripcio}</p>
+  </div>
+
+  <div>
+    <img src={src} alt={alt} title={title} class='w-full rounded-xl' />
+  </div>
+  <div class='flex flex-col lg:flex-row gap-6 lg:gap-0 lg:justify-evenly'>
+    <ul class='lg:w-3/12 flex flex-col gap-2 font-light leading-relaxed'>
+      <li>
+        <span class='font-thin uppercase text-red-500 mr-2'>Mida:</span>
+        {mida}
+      </li>
+      <li>
+        <span class='font-thin uppercase text-red-500 mr-2'>Tècnica:</span>
+        {tecnica}
+      </li>
+      <li>
+        <span class='font-thin uppercase text-red-500 mr-2'>
+          Periode artístic:
+        </span>
+        res
+      </li>
+    </ul>
+    <div class='lg:w-8/12'>
+      <p class='text-justify'>
+        <span class='font-thin uppercase text-red-500 mr-2'>Descripció:</span>
+        {descripcioLlarga}
+      </p>
+    </div>
+  </div>
+</div>;
+---
