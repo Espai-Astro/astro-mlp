@@ -27,6 +27,7 @@ import youtube from '../assets/img/youtube.png';
 
 import trass from '../assets/svg/paint.svg';
 import gargot from '../assets/svg/scribble.svg';
+import fletxaAmunt from '../assets/svg/arrow-up.svg';
 
 export {
   art1,
@@ -55,4 +56,5 @@ export {
   youtube,
   trass,
   gargot,
+  fletxaAmunt,
 };

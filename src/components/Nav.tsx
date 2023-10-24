@@ -25,7 +25,7 @@ const Nav = () => {
       {/* Hamburguesa */}
         <div
           onClick={() => setClicat(!clicat)}
-          className='lg:hidden space-y-1.5 cursor-pointer z-30'>
+          className='lg:hidden space-y-1.5 cursor-pointer z-20'>
           <motion.span
             animate={{
               rotateZ: clicat ? 45 : 0,
@@ -61,7 +61,7 @@ const Nav = () => {
 
       {/* Menu < LG */}
       {clicat && (
-        <div className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 pt-12 pb-20 z-20'>
+        <div className='absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 pt-12 pb-20 z-10'>
           <div className='flex flex-col gap-9'>
             <div>
               <a href='/'>

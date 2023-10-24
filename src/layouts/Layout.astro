@@ -1,11 +1,13 @@
 ---
 import { Footer } from '../components/index';
 import { Nav } from '../components/index';
+import fletxa from '../assets/svg/arrow-up.svg';
 
 interface Props {
   titol: string;
 }
 const { titol } = Astro.props;
+const fletxaAmunt = fletxa.src;
 console.info('Càrrega Layout -->', titol);
 ---
 
@@ -26,7 +28,7 @@ console.info('Càrrega Layout -->', titol);
 
   <body class='bg-neutral-300'>
     <div class='container mx-auto my-4 px-4 xl:px-12 text-neutral-800'>
-      <header>
+      <header id='inici'>
         <Nav client:load />
       </header>
       <main>
@@ -35,7 +37,15 @@ console.info('Càrrega Layout -->', titol);
       <footer>
         <Footer />
       </footer>
+      <div class='sticky bottom-6 mr-2 flex place-content-end z-20'>
+        <a href={'#inici'}
+          ><button class='p-1 bg-zinc-600 rounded-full opacity-80'
+            ><img src={fletxaAmunt} alt='fletxa amunt' /></button
+          ></a
+        >
+      </div>
     </div>
+
     <style is:global>
       * {
         margin: 0;
