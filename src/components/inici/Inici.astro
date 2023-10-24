@@ -1,12 +1,12 @@
 ---
 import trass from '../../assets/svg/paint.svg';
-import retrat from '../../assets/img/main-portrait.jpg'
+import retrat from '../../assets/img/main-portrait.jpg';
 import { endPoints, textosInici } from '../../lib/data';
 import TextosInici from './TextosInici.astro';
 //import TextosInici from './TextosInici.jsx';
-import { SeparadorInici } from '../index';
-import { DadesInici } from '../index';
-import { ImatgeInici } from '../index';
+import { SeparadorInici } from './';
+import { DadesInici } from './';
+import { ImatgeInici } from './';
 import { fetchDades } from '../../lib/utils/fetchDades';
 
 const srcRetrat: string = retrat.src;
@@ -42,3 +42,4 @@ let text: string = dades && dades.length > 0 ? dades[0].body : '';
     </div>
   </div>
 </div>
+...

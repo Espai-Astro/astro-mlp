@@ -21,7 +21,7 @@ import {
   bio12,
   x,
   youtube,
-} from '../../assets/index';
+} from '../../assets';
 
 export const textosInici = [
   {

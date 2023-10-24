@@ -1,8 +1,9 @@
 ---
 import { galeria } from '../../lib/data';
+import type { artT } from '../../lib/types';
 
 import gargot from '../../assets/svg/scribble.svg';
-import { GaleriaArt } from '../index';
+import { GaleriaArt } from './';
 const srcGargot = gargot.src;
 ---
 
@@ -35,9 +36,13 @@ const srcGargot = gargot.src;
         veritatis dolorem maxime totam.
       </p>
     </div>
-    <GaleriaArt galeria={galeria} />
+    <div class='grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid'>
+      {
+        galeria.map((art: artT) => <GaleriaArt art={art} />)
+        }
+    </div>
   </div>
-  <a href='/' class="w-full lg:w-1/4 ">
+  <a href='/' class='w-full lg:w-1/4'>
     <button
       class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1 font-semibold text-sm'
       >Tornar a Inici</button
