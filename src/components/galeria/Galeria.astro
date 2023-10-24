@@ -1,41 +1,46 @@
 ---
 import { galeria } from '../../lib/data';
-import type { artT } from '../../lib/types';
 
 import gargot from '../../assets/svg/scribble.svg';
 import { GaleriaArt } from '../index';
 const srcGargot = gargot.src;
 ---
 
-<div class='flex flex-col gap-14 px-6'>
-  <div class='flex flex-col lg:flex-row lg:gap-3'>
-    <h1 class='titol'>Galeria</h1>
-    <img src={srcGargot} alt='gargot' />
+<div class='flex flex-col gap-9 items-center px-6'>
+  <div class='flex flex-col gap-14'>
+    <div class='flex flex-col lg:flex-row lg:gap-3'>
+      <h1 class='titol'>Galeria</h1>
+      <img src={srcGargot} alt='gargot' />
+    </div>
+    <div
+      class='flex flex-col gap-6 p-6 mb-10 first-letter border-zinc-200 border-4 rounded-xl'>
+      <p class='first-letter'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim
+        minima at necessitatibus accusantium quia. Suscipit magni quia et ipsam.
+        Inventore sed consequatur, quos omnis magni sint cum ab eligendi at
+        numquam natus excepturi consectetur quibusdam, dolorum aut fugiat rem
+        doloremque.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor odio sed
+        est enim consequatur dolorum vero cupiditate dignissimos corporis
+        adipisci! Recusandae illum enim unde voluptates ipsam ratione voluptate
+        tempore, dicta incidunt explicabo ut consequuntur in at doloremque minus
+        cum corporis praesentium? Autem doloribus asperiores, inventore quia ad
+        sunt expedita unde ab velit, laudantium aut, sint deleniti ex ut itaque
+        eos impedit repellendus quos recusandae? Dolore cupiditate sunt, sed qui
+        saepe, magnam enim voluptatibus iste consequuntur sequi nobis molestias
+        porro ut. Dicta unde ratione iusto, laboriosam quae tempore error
+        commodi doloremque eveniet molestiae adipisci nulla sit impedit
+        veritatis dolorem maxime totam.
+      </p>
+    </div>
+    <GaleriaArt galeria={galeria} />
   </div>
-  <div
-    class='flex flex-col gap-6 p-6 mb-10 first-letter border-zinc-200 border-4 rounded-xl'>
-    <p class='first-letter'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim minima
-      at necessitatibus accusantium quia. Suscipit magni quia et ipsam.
-      Inventore sed consequatur, quos omnis magni sint cum ab eligendi at
-      numquam natus excepturi consectetur quibusdam, dolorum aut fugiat rem
-      doloremque.
-    </p>
-    <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor odio sed
-      est enim consequatur dolorum vero cupiditate dignissimos corporis
-      adipisci! Recusandae illum enim unde voluptates ipsam ratione voluptate
-      tempore, dicta incidunt explicabo ut consequuntur in at doloremque minus
-      cum corporis praesentium? Autem doloribus asperiores, inventore quia ad
-      sunt expedita unde ab velit, laudantium aut, sint deleniti ex ut itaque
-      eos impedit repellendus quos recusandae? Dolore cupiditate sunt, sed qui
-      saepe, magnam enim voluptatibus iste consequuntur sequi nobis molestias
-      porro ut. Dicta unde ratione iusto, laboriosam quae tempore error commodi
-      doloremque eveniet molestiae adipisci nulla sit impedit veritatis dolorem
-      maxime totam.
-    </p>
-  </div>
-  <div class='grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid'>
-    {galeria.map((art: artT) => <GaleriaArt art={art} />)}
-  </div>
+  <a href='/' class="w-full lg:w-1/4 ">
+    <button
+      class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1 font-semibold text-sm'
+      >Tornar a Inici</button
+    >
+  </a>
 </div>

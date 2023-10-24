@@ -10,15 +10,12 @@ const targeta: artT = galeria[idArt];
 const { src, alt, title, any, mida, tecnica, descripcio, descripcioLlarga } =
   targeta;
 
-const textBiografiaTargeta = obtenirTextBiografia(
-  any,
-  textosBiografia,
-);
+const textBiografiaTargeta = obtenirTextBiografia(any, textosBiografia);
 const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
 ---
 
 <div
-  class='flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl'>
+  class='flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl border-zinc-200'>
   <div class='flex flex-col gap-6 lg:gap-3'>
     <div class='flex flex-col lg:flex-row gap-3 items-baseline'>
       <p class='text-red-500 text-3xl uppercase'>{title}</p>
@@ -42,7 +39,7 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
       </li>
       <li class='flex flex-wrap gap-2'>
         <span class='font-thin uppercase text-red-500'> Periode artístic:</span>
-        <div class="flex gap-2">
+        <div class='flex gap-2'>
           <span>{titolPeriode}</span>
           <span>({anysPeriode[0]} - {anysPeriode[1]})</span>
         </div>
@@ -55,4 +52,9 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
       </p>
     </div>
   </div>
+  <a href='/galeria'>
+    <button
+    class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1'
+    >Tornar a Galeria</button>
+  </a>
 </div>
