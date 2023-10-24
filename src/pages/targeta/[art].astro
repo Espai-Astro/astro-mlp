@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { TargetaArt } from '../../components/targeta';
+
+export const getStaticPaths = () => {
+  return [
+    { params: { art: 'art1' } },
+    { params: { art: 'art2' } },
+    { params: { art: 'art3' } },
+    { params: { art: 'art4' } },
+    { params: { art: 'art5' } },
+    { params: { art: 'art6' } },
+    { params: { art: 'art7' } },
+    { params: { art: 'art8' } },
+  ];
+};
+
+const { art: paramId } = Astro.params;
+const idArt = Number(paramId?.substring(3)) - 1;
+console.log('idArt -->', idArt);
+---
+
+<Layout titol={`Targeta Art${idArt + 1}`}>
+  <TargetaArt idArt={idArt} />
+</Layout>
