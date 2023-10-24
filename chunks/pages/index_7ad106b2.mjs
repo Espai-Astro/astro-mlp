@@ -1,7 +1,7 @@
 import 'react/jsx-runtime';
 /* empty css                               */import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, u as unescapeHTML, e as renderComponent } from '../astro_78163e4f.mjs';
 import 'clsx';
-import { e as endPoints, b as textosInici, r as retrat, c as trass, $ as $$Layout } from './_id__fb7c1a8e.mjs';
+import { b as textosInici, r as retrat, c as trass, $ as $$Layout } from './_id__1e98cbcd.mjs';
 /* empty css                           */import 'html-escaper';
 import 'react';
 import 'framer-motion';
@@ -17,8 +17,8 @@ const $$Astro$4 = createAstro("https://espai-astro.github.io");
 const $$ImatgeInici = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$ImatgeInici;
-  const { srcRetrat, srcTra\u00E7, text } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<div class="max-w-md"><figure class="flex flex-col gap-16 sm:gap-20"><div class="relative"><img${addAttribute(srcRetrat, "src")} alt="Retrat de na Hua" title="Retrat de na Hua" class="rounded-xl"><div class="absolute -bottom-1/4 right-1/2 translate-x-1/2 w-11/12"><img${addAttribute(srcTra\u00E7, "src")} alt="Traç" title="Traç"></div></div><figcaption class="text-xs px-4 leading-loose first-letter">${text}</figcaption></figure></div>`;
+  const { srcRetrat, srcTra\u00E7 } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div class="max-w-md"><figure class="flex flex-col gap-16 sm:gap-20"><div class="relative"><img${addAttribute(srcRetrat, "src")} alt="Retrat de na Hua" title="Retrat de na Hua" class="rounded-xl"><div class="absolute -bottom-1/4 right-1/2 translate-x-1/2 w-11/12"><img${addAttribute(srcTra\u00E7, "src")} alt="Traç" title="Traç"></div></div><figcaption class="text-xs px-4 leading-loose first-letter">Repellendus optio nemo illum voluptates a fugiat quidem perferendis. Ab nihil pariatur esse odit, accusamus accusantium sed. Recusandae repellat amet, ducimus illo, aperiam enim similique quam veniam ea ut tenetur officiis regulator!</figcaption></figure></div>`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/inici/ImatgeInici.astro", void 0);
 
 const $$Astro$3 = createAstro("https://espai-astro.github.io");
@@ -40,18 +40,6 @@ const $$TextosInici = createComponent(async ($$result, $$props, $$slots) => {
   })}</div>`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/inici/TextosInici.astro", void 0);
 
-const fetchDades = async (url) => {
-  try {
-    const resposta = await fetch(url);
-    const dades = await resposta.json();
-    return dades;
-  } catch (error) {
-    console.error("Error fetchdades -->", error);
-  } finally {
-    console.log("fetchDades --> finalitzat");
-  }
-};
-
 const $$Astro$2 = createAstro("https://espai-astro.github.io");
 const $$Inici = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
@@ -59,16 +47,13 @@ const $$Inici = createComponent(async ($$result, $$props, $$slots) => {
   const srcRetrat = retrat.src;
   const srcTra\u00E7 = trass.src;
   const classesClaus = "font-bold text-red-500";
-  const posts = endPoints.posts;
-  const dades = await fetchDades(posts);
-  let text = dades && dades.length > 0 ? dades[0].body : "";
   return renderTemplate`${maybeRenderHead()}<div class="flex flex-col items-center justify-center gap-12 px-4 md:px-12 lg:px-20"><h1 class="px-2 text-3xl sm:text-4xl lg:text-5xl lg:text-center">
 Entra a l'encantador <span class="font-bold uppercase text-red-500 text-2xl sm:text-3xl lg:text-4xl">món digital</span> de na Hua
 </h1><div class="flex flex-col xl:flex-row gap-3"><div class="relative xl:flex-auto xl:w-2/3">${renderComponent($$result, "SeparadorInici", $$SeparadorInici, {})}${renderComponent($$result, "TextosInici", $$TextosInici, { "textosInici": textosInici, "classesClaus": classesClaus })}${renderComponent($$result, "DadesInici", $$DadesInici, {})}<!-- <TextosInici
         client:load
         textosInici={textosInici}
         classesClaus={classesClaus}
-      /> --></div><div class="xl:flex-auto xl:w-1/2 flex flex-col items-center justify-center px-6">${renderComponent($$result, "ImatgeInici", $$ImatgeInici, { "srcRetrat": srcRetrat, "srcTra\xE7": srcTra\u00E7, "text": text })}</div></div></div>
+      /> --></div><div class="xl:flex-auto xl:w-1/2 flex flex-col items-center justify-center px-6">${renderComponent($$result, "ImatgeInici", $$ImatgeInici, { "srcRetrat": srcRetrat, "srcTra\xE7": srcTra\u00E7 })}</div></div></div>
 ...`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/inici/Inici.astro", void 0);
 

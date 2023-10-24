@@ -416,10 +416,6 @@ const xxss = [
   }
 ];
 
-const endPoints = {
-  posts: "https://jsonplaceholder.typicode.com/posts"
-};
-
 const $$Astro$3 = createAstro("https://espai-astro.github.io");
 const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
@@ -483,4 +479,4 @@ const _id_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$Layout as $, _id_ as _, galeria as a, textosInici as b, trass as c, endPoints as e, gargot as g, retrat as r, textosBiografia as t };
+export { $$Layout as $, _id_ as _, galeria as a, textosInici as b, trass as c, gargot as g, retrat as r, textosBiografia as t };

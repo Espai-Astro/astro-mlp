@@ -1,6 +1,6 @@
 /* empty css                               */import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, e as renderComponent } from '../astro_78163e4f.mjs';
 import 'clsx';
-import { a as galeria, g as gargot, $ as $$Layout } from './_id__fb7c1a8e.mjs';
+import { a as galeria, g as gargot, $ as $$Layout } from './_id__1e98cbcd.mjs';
 import 'html-escaper';
 import 'react/jsx-runtime';
 import 'react';
