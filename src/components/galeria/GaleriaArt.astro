@@ -1,22 +1,24 @@
 ---
-import type {artT} from '../lib/types';
+import type { artT } from '../../lib/types';
 
 interface Props {
-	art: artT;
+  art: artT;
 }
-const { art: { id, src, alt, title, descripcio }} = Astro.props;
+const {
+  art: { id, src, alt, title, descripcio },
+} = Astro.props;
 ---
 
 <div class='group'>
   <div class='relative'>
-    <a href={`/galeria/art${id}`}>
-			<img
-				class='relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3'
-				src={src}
-				alt={alt}
-				title={title}
-			/>
-		</a>
+    <a href={`/targeta/art${id}`}>
+      <img
+        class='relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3'
+        src={src}
+        alt={alt}
+        title={title}
+      />
+    </a>
     <div
       class='absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4'>
     </div>

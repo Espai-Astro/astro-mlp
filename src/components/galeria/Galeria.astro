@@ -1,16 +1,16 @@
 ---
-import { galeria } from '../lib/data';
-import type { artT } from '../lib/types';
+import { galeria } from '../../lib/data';
+import type { artT } from '../../lib/types';
 
-import gargot from '../assets/svg/scribble.svg';
-import GaleriaArt from './GaleriaArt.astro';
+import gargot from '../../assets/svg/scribble.svg';
+import { GaleriaArt } from '../index';
 const srcGargot = gargot.src;
 ---
 
 <div class='flex flex-col gap-14 px-6'>
   <div class='flex flex-col lg:flex-row lg:gap-3'>
     <h1 class='titol'>Galeria</h1>
-    <img src={srcGargot} class='' alt='gargot' />
+    <img src={srcGargot} alt='gargot' />
   </div>
   <div
     class='flex flex-col gap-6 p-6 mb-10 first-letter border-zinc-200 border-4 rounded-xl'>

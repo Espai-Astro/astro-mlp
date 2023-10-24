@@ -1,9 +1,9 @@
 ---
-import { galeria } from '../lib/data/index';
-import { textosBiografia } from '../lib/data/index';
-import { obtenirTextBiografia } from '../lib/utils/obtenirTextBiografia';
+import { galeria } from '../../lib/data/index';
+import { textosBiografia } from '../../lib/data/index';
+import { obtenirTextBiografia } from '../../lib/utils/obtenirTextBiografia';
 
-import type { artT } from '../lib/types';
+import type { artT } from '../../lib/types';
 
 const { idArt } = Astro.props;
 const targeta: artT = galeria[idArt];
@@ -31,7 +31,7 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
     <img src={src} alt={alt} title={title} class='w-full rounded-xl' />
   </div>
   <div class='flex flex-col lg:flex-row gap-6 lg:gap-0 lg:justify-evenly'>
-    <ul class='lg:w-3/12 flex flex-col gap-1 font-light leading-relaxed'>
+    <ul class='lg:w-4/12 flex flex-col gap-1 font-light leading-relaxed'>
       <li>
         <span class='font-thin uppercase text-red-500 mr-2'>Mida:</span>
         {mida}
@@ -40,13 +40,15 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
         <span class='font-thin uppercase text-red-500 mr-2'>Tècnica:</span>
         {tecnica}
       </li>
-      <li class='flex lg:flex-col gap-2 lg:gap-0'>
+      <li class='flex flex-wrap gap-2'>
         <span class='font-thin uppercase text-red-500'> Periode artístic:</span>
-        <span>{titolPeriode}</span>
-        <span>({anysPeriode[0]} - {anysPeriode[1]})</span>
+        <div class="flex gap-2">
+          <span>{titolPeriode}</span>
+          <span>({anysPeriode[0]} - {anysPeriode[1]})</span>
+        </div>
       </li>
     </ul>
-    <div class='lg:w-8/12'>
+    <div class='lg:w-7/12'>
       <p class='text-justify'>
         <span class='font-thin uppercase text-red-500 mr-2'>Descripció:</span>
         {descripcioLlarga}
