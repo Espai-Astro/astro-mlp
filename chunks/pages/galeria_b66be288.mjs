@@ -1,6 +1,6 @@
 /* empty css                               */import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, e as renderComponent } from '../astro_78163e4f.mjs';
 import 'clsx';
-import { a as galeria, g as gargot, $ as $$Layout } from './_id__1e98cbcd.mjs';
+import { a as galeria, b as baseUrl, g as gargot, $ as $$Layout } from './_id__d1202ee2.mjs';
 import 'html-escaper';
 import 'react/jsx-runtime';
 import 'react';
@@ -29,7 +29,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor odio sed
         porro ut. Dicta unde ratione iusto, laboriosam quae tempore error
         commodi doloremque eveniet molestiae adipisci nulla sit impedit
         veritatis dolorem maxime totam.
-</p></div><div class="grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid">${galeria.map((art) => renderTemplate`${renderComponent($$result, "GaleriaArt", $$GaleriaArt, { "art": art })}`)}</div></div><a href="/" class="w-full lg:w-1/4"><button class="w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1 font-semibold text-sm">Tornar a Inici</button></a></div>`;
+</p></div><div class="grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid">${galeria.map((art) => renderTemplate`${renderComponent($$result, "GaleriaArt", $$GaleriaArt, { "art": art })}`)}</div></div><a${addAttribute(baseUrl, "href")} class="w-full lg:w-1/4"><button class="w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1 font-semibold text-sm">Tornar a Inici</button></a></div>`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/galeria/Galeria.astro", void 0);
 
 const $$Astro$1 = createAstro("https://espai-astro.github.io");
@@ -37,7 +37,7 @@ const $$GaleriaArt = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$GaleriaArt;
   const { id, src, alt, title, descripcio } = Astro2.props.art;
-  return renderTemplate`${maybeRenderHead()}<div class="group"><div class="relative"><a${addAttribute(`/targeta/art${id}`, "href")}><img class="relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3"${addAttribute(src, "src")}${addAttribute(alt, "alt")}${addAttribute(title, "title")}></a><div class="absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4"></div></div><div class="px-2 py-4 transition-all duration-300 group-hover:translate-y-3 group-hover:translate-x-2"><p class="font-semibold text-red-500 uppercase">${title}</p><p class="transition-all duration-1000 opacity-0 group-hover:opacity-100 px-2 text-sm">${descripcio}</p></div></div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="group"><div class="relative"><a${addAttribute(`${baseUrl}/targeta/art${id}`, "href")}><img class="relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3"${addAttribute(src, "src")}${addAttribute(alt, "alt")}${addAttribute(title, "title")}></a><div class="absolute left-0 top-0 w-full h-full bg-zinc-200 rounded-2xl group-hover:rounded-xl transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-4"></div></div><div class="px-2 py-4 transition-all duration-300 group-hover:translate-y-3 group-hover:translate-x-2"><p class="font-semibold text-red-500 uppercase">${title}</p><p class="transition-all duration-1000 opacity-0 group-hover:opacity-100 px-2 text-sm">${descripcio}</p></div></div>`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/galeria/GaleriaArt.astro", void 0);
 
 const $$Astro = createAstro("https://espai-astro.github.io");

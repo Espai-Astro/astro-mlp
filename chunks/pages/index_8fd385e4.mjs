@@ -1,7 +1,7 @@
 import 'react/jsx-runtime';
 /* empty css                               */import { c as createAstro, a as createComponent, r as renderTemplate, m as maybeRenderHead, b as addAttribute, u as unescapeHTML, e as renderComponent } from '../astro_78163e4f.mjs';
 import 'clsx';
-import { b as textosInici, r as retrat, c as trass, $ as $$Layout } from './_id__1e98cbcd.mjs';
+import { c as textosInici, r as retrat, d as trass, $ as $$Layout } from './_id__d1202ee2.mjs';
 /* empty css                           */import 'html-escaper';
 import 'react';
 import 'framer-motion';

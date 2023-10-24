@@ -26,11 +26,13 @@ const animacioElementNav = {
   hidden: { opacity: 0, x: -100 }
 };
 
+const baseUrl = "/astro-mlp";
+
 const Nav = () => {
   const [clicat, setClicat] = useState(false);
   const srcAvatar = avatar.src;
   return /* @__PURE__ */ jsxs("nav", { className: "bg-neutral-200 rounded-b-2xl border-t-4 border-t-black relative py-12 px-8 mb-20 flex justify-between items-center font-medium titol", children: [
-    /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("a", { href: "/", children: /* @__PURE__ */ jsx(
+    /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("a", { href: baseUrl, children: /* @__PURE__ */ jsx(
       "img",
       {
         className: "rounded-full w-12 md:w-16 xl:w-24 border-2 border-black  hover:scale-110",
@@ -77,12 +79,12 @@ const Nav = () => {
       }
     ),
     /* @__PURE__ */ jsx("div", { className: "hidden lg:block", children: /* @__PURE__ */ jsxs("ul", { className: "flex flex-col items-end gap-x-8 gap-y-3 text-sm", children: [
-      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: "/", children: "Inici" }) }),
-      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: "/biografia", children: "Biografia" }) }),
-      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: "/galeria", children: "Galeria" }) })
+      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: baseUrl, children: "Inici" }) }),
+      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: `${baseUrl}/biografia`, children: "Biografia" }) }),
+      /* @__PURE__ */ jsx("li", { className: "duration-200 hover:font-bold hover:scale-110", children: /* @__PURE__ */ jsx("a", { href: `${baseUrl}/galeria`, children: "Galeria" }) })
     ] }) }),
     clicat && /* @__PURE__ */ jsx("div", { className: "absolute inset-0 h-fit w-full bg-zinc-200 rounded-b-2xl px-8 pt-12 pb-20 z-10", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-9", children: [
-      /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("a", { href: "/", children: /* @__PURE__ */ jsx(
+      /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("a", { href: baseUrl, children: /* @__PURE__ */ jsx(
         "img",
         {
           className: "rounded-full border-2 border-black w-12 md:w-16 xl:w-24 hover:scale-110",
@@ -103,7 +105,7 @@ const Nav = () => {
               {
                 variants: animacioElementNav,
                 className: "duration-200 hover:font-bold hover:scale-110",
-                children: /* @__PURE__ */ jsx("a", { href: "/", children: "Inici" })
+                children: /* @__PURE__ */ jsx("a", { href: baseUrl, children: "Inici" })
               }
             ),
             /* @__PURE__ */ jsx(
@@ -111,7 +113,7 @@ const Nav = () => {
               {
                 variants: animacioElementNav,
                 className: "duration-200 hover:font-bold hover:scale-110",
-                children: /* @__PURE__ */ jsx("a", { href: "/biografia", children: "Biografia" })
+                children: /* @__PURE__ */ jsx("a", { href: `${baseUrl}/biografia`, children: "Biografia" })
               }
             ),
             /* @__PURE__ */ jsx(
@@ -119,7 +121,7 @@ const Nav = () => {
               {
                 variants: animacioElementNav,
                 className: "duration-200 hover:font-bold hover:scale-110",
-                children: /* @__PURE__ */ jsx("a", { href: "/galeria", children: "Galeria" })
+                children: /* @__PURE__ */ jsx("a", { href: `${baseUrl}/galeria`, children: "Galeria" })
               }
             )
           ]
@@ -456,7 +458,7 @@ const $$TargetaArt = createComponent(async ($$result, $$props, $$slots) => {
   const { src, alt, title, any, mida, tecnica, descripcio, descripcioLlarga } = targeta;
   const textBiografiaTargeta = obtenirTextBiografia(any, textosBiografia);
   const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
-  return renderTemplate`${maybeRenderHead()}<div class="flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl border-zinc-200"><div class="flex flex-col gap-6 lg:gap-3"><div class="flex flex-col lg:flex-row gap-3 items-baseline"><p class="text-red-500 text-3xl uppercase">${title}</p><span class="text-xl font-thin"> (${any})</span></div><p>${descripcio}</p></div><div><img${addAttribute(src, "src")}${addAttribute(alt, "alt")}${addAttribute(title, "title")} class="w-full rounded-xl"></div><div class="flex flex-col lg:flex-row gap-6 lg:gap-0 lg:justify-evenly"><ul class="lg:w-4/12 flex flex-col gap-1 font-light leading-relaxed"><li><span class="font-thin uppercase text-red-500 mr-2">Mida:</span>${mida}</li><li><span class="font-thin uppercase text-red-500 mr-2">Tècnica:</span>${tecnica}</li><li class="flex flex-wrap gap-2"><span class="font-thin uppercase text-red-500"> Periode artístic:</span><div class="flex gap-2"><span>${titolPeriode}</span><span>(${anysPeriode[0]} - ${anysPeriode[1]})</span></div></li></ul><div class="lg:w-7/12"><p class="text-justify"><span class="font-thin uppercase text-red-500 mr-2">Descripció:</span>${descripcioLlarga}</p></div></div><a href="/galeria"><button class="w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1">Tornar a Galeria</button></a></div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl border-zinc-200"><div class="flex flex-col gap-6 lg:gap-3"><div class="flex flex-col lg:flex-row gap-3 items-baseline"><p class="text-red-500 text-3xl uppercase">${title}</p><span class="text-xl font-thin"> (${any})</span></div><p>${descripcio}</p></div><div><img${addAttribute(src, "src")}${addAttribute(alt, "alt")}${addAttribute(title, "title")} class="w-full rounded-xl"></div><div class="flex flex-col lg:flex-row gap-6 lg:gap-0 lg:justify-evenly"><ul class="lg:w-4/12 flex flex-col gap-1 font-light leading-relaxed"><li><span class="font-thin uppercase text-red-500 mr-2">Mida:</span>${mida}</li><li><span class="font-thin uppercase text-red-500 mr-2">Tècnica:</span>${tecnica}</li><li class="flex flex-wrap gap-2"><span class="font-thin uppercase text-red-500"> Periode artístic:</span><div class="flex gap-2"><span>${titolPeriode}</span><span>(${anysPeriode[0]} - ${anysPeriode[1]})</span></div></li></ul><div class="lg:w-7/12"><p class="text-justify"><span class="font-thin uppercase text-red-500 mr-2">Descripció:</span>${descripcioLlarga}</p></div></div><a${addAttribute(`${baseUrl}/galeria`, "href")}><button class="w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1">Tornar a Galeria</button></a></div>`;
 }, "/home/jordi/Documents/ASTRO/astro-mlp/src/components/targeta/TargetaArt.astro", void 0);
 
 const $$Astro = createAstro("https://espai-astro.github.io");
@@ -479,4 +481,4 @@ const _id_ = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-export { $$Layout as $, _id_ as _, galeria as a, textosInici as b, trass as c, gargot as g, retrat as r, textosBiografia as t };
+export { $$Layout as $, _id_ as _, galeria as a, baseUrl as b, textosInici as c, trass as d, gargot as g, retrat as r, textosBiografia as t };
