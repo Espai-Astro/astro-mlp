@@ -3,6 +3,7 @@ import gargot from '../../assets/svg/scribble.svg';
 import { TextBiografia } from './';
 import { textosBiografia } from '../../lib/data';
 import type { textBiografiaT } from '../../lib/types';
+import { baseUrl } from '../../lib/const/baseUrl';
 const mida = textosBiografia.length;
 const srcGargot = gargot.src;
 const classesClaus = 'font-bold text-red-500';
@@ -29,7 +30,7 @@ const classesClaus = 'font-bold text-red-500';
       }
     </div>
   </div>
-  <a href='/' class='w-full lg:w-1/4'>
+  <a href={baseUrl} class='w-full lg:w-1/4'>
     <button
       class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1'
       >Tornar a Inici</button

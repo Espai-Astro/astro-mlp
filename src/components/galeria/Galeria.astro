@@ -4,6 +4,7 @@ import type { artT } from '../../lib/types';
 
 import gargot from '../../assets/svg/scribble.svg';
 import { GaleriaArt } from './';
+import { baseUrl } from '../../lib/const/baseUrl';
 const srcGargot = gargot.src;
 ---
 
@@ -42,7 +43,7 @@ const srcGargot = gargot.src;
         }
     </div>
   </div>
-  <a href='/' class='w-full lg:w-1/4'>
+  <a href={baseUrl} class='w-full lg:w-1/4'>
     <button
       class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1 font-semibold text-sm'
       >Tornar a Inici</button

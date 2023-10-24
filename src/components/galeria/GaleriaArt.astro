@@ -1,4 +1,5 @@
 ---
+import { baseUrl } from '../../lib/const/baseUrl';
 import type { artT } from '../../lib/types';
 
 interface Props {
@@ -9,7 +10,7 @@ const { id, src, alt, title, descripcio } = Astro.props.art;
 
 <div class='group'>
   <div class='relative'>
-    <a href={`/targeta/art${id}`}>
+    <a href={`${baseUrl}/targeta/art${id}`}>
       <img
         class='relative z-10 w-full mx-auto rounded-2xl transition-all duration-300 group-hover:-translate-x-3'
         src={src}
