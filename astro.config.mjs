@@ -7,4 +7,5 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   site: 'https://espai-astro.github.io',
   base: '/astro-mlp',
+  output: 'server',
 });
