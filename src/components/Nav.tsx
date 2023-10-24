@@ -13,13 +13,13 @@ const Nav = () => {
       <div>
         <a href={baseUrl}>
           <img
-            className='rounded-full w-12 md:w-16 xl:w-24 border-2 border-black  hover:scale-110'
+            className='rounded-full w-12 md:w-16 xl:w-24 border-2 border-black hover:scale-110'
             src={srcAvatar}
             alt='avatar'
           />
         </a>
       </div>
-      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-2xl font-bold'>
+      <h1 className='absolute top-13 right-1/2 translate-x-1/2 text-2xl lg:text-3xl font-bold'>
         Hua
       </h1>
 

@@ -17,12 +17,12 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
 
 <div
   class='flex flex-col gap-14 lg:gap-20 py-8 lg:py-16 px-8 lg:px-24 border-2 rounded-xl border-zinc-200'>
-  <div class='flex flex-col gap-6 lg:gap-3'>
-    <div class='flex flex-col lg:flex-row gap-3 items-baseline'>
-      <p class='text-red-500 text-3xl uppercase'>{title}</p>
+  <div class='flex flex-col gap-2'>
+    <div class='flex flex-wrap gap-3 items-baseline'>
+      <p class='text-red-500 text-2xl text-start uppercase'>{title}</p>
       <span class='text-xl font-thin'> ({any})</span>
     </div>
-    <p>{descripcio}</p>
+    <p class="pl-4">{descripcio}</p>
   </div>
 
   <div>
@@ -40,9 +40,9 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
       </li>
       <li class='flex flex-wrap gap-2'>
         <span class='font-thin uppercase text-red-500'> Periode artístic:</span>
-        <div class='flex gap-2'>
+        <div class='flex flex-col xl:flex-row xl:gap-2'>
           <span>{titolPeriode}</span>
-          <span>({anysPeriode[0]} - {anysPeriode[1]})</span>
+          <span class='text-sm'>({anysPeriode[0]} - {anysPeriode[1]})</span>
         </div>
       </li>
     </ul>
