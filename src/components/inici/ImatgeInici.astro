@@ -2,9 +2,8 @@
 interface Props {
   srcRetrat: string;
   srcTraç: string;
-  text: string;
 }
-const { srcRetrat, srcTraç, text } = Astro.props;
+const { srcRetrat, srcTraç } = Astro.props;
 ---
 
 <div class='max-w-md'>
@@ -20,6 +19,7 @@ const { srcRetrat, srcTraç, text } = Astro.props;
         <img src={srcTraç} alt='Traç' title='Traç' />
       </div>
     </div>
-    <figcaption class='text-xs px-4 leading-loose first-letter'>{text}</figcaption>
+    <figcaption class='text-xs px-4 leading-loose first-letter'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus optio nemo illum voluptates a fugiat quidem perferendis. Ab nihil pariatur esse odit, accusamus accusantium sed. Recusandae repellat amet, ducimus illo, aperiam enim similique quam veniam ea ut tenetur officiis! Fugit inventore nobis deleniti nihil unde sequi eaque enim ea autem.</figcaption>
   </figure>
 </div>
+

@@ -1,20 +1,16 @@
 ---
 import trass from '../../assets/svg/paint.svg';
 import retrat from '../../assets/img/main-portrait.jpg';
-import { endPoints, textosInici } from '../../lib/data';
+import { textosInici } from '../../lib/data';
 import TextosInici from './TextosInici.astro';
 //import TextosInici from './TextosInici.jsx';
 import { SeparadorInici } from './';
 import { DadesInici } from './';
 import { ImatgeInici } from './';
-import { fetchDades } from '../../lib/utils/fetchDades';
 
 const srcRetrat: string = retrat.src;
 const srcTraç: string = trass.src;
 const classesClaus = 'font-bold text-red-500';
-const posts = endPoints.posts;
-const dades = await fetchDades(posts);
-let text: string = dades && dades.length > 0 ? dades[0].body : '';
 ---
 
 <div
@@ -38,7 +34,7 @@ let text: string = dades && dades.length > 0 ? dades[0].body : '';
     </div>
     <div
       class='xl:flex-auto xl:w-1/2 flex flex-col items-center justify-center px-6'>
-      <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç} text={text} />
+      <ImatgeInici srcRetrat={srcRetrat} srcTraç={srcTraç}/>
     </div>
   </div>
 </div>
