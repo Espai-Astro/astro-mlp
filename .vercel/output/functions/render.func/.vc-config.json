@@ -1,0 +1,5 @@
+{
+	"runtime": "nodejs18.x",
+	"handler": "home/jordi/Documents/ASTRO/astro-mlp/dist/entry.mjs",
+	"launcherType": "Nodejs"
+}
