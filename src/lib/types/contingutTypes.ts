@@ -1,10 +1,10 @@
-export type textIniciT = {
+export type TextIniciT = {
   id: number;
   text: string;
   claus: string[];
 };
 
-export type textBiografiaT = {
+export type TextBiografiaT = {
   id: number;
   src: string;
   anys: number[];
@@ -13,14 +13,14 @@ export type textBiografiaT = {
   claus: string[];
 };
 
-export type postT = {
+export type PostT = {
   userId: number;
   id: number;
   title: string;
   body: string;
 };
 
-export type artT = {
+export type ArtT = {
   id: number;
   src: string;
   alt: string;
@@ -32,7 +32,7 @@ export type artT = {
   descripcioLlarga: string;
 };
 
-export type xsT = {
+export type XsT = {
   id: number;
   nom: string;
   src: string;

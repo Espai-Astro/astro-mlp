@@ -1,8 +1,8 @@
 import type { FC } from 'react';
-import type { textIniciT } from '../../lib/types';
+import type { TextIniciT } from '../../lib/types';
 
 interface Props {
-  textosInici: textIniciT[];
+  textosInici: TextIniciT[];
   classesClaus: string;
 }
 

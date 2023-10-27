@@ -1,3 +1,9 @@
-import type { textIniciT, postT, artT, xsT, textBiografiaT } from './contingutTypes';
+import type {
+  TextIniciT,
+  PostT,
+  ArtT,
+  XsT,
+  TextBiografiaT,
+} from './contingutTypes';
 
-export type { textIniciT, postT, artT, xsT, textBiografiaT };
+export type { TextIniciT, PostT, ArtT, XsT, TextBiografiaT };

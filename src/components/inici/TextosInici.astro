@@ -1,8 +1,8 @@
 ---
-import type { textIniciT } from '../../lib/types';
+import type { TextIniciT } from '../../lib/types';
 
 interface Props {
-  textosInici: textIniciT[];
+  textosInici: TextIniciT[];
   classesClaus: string;
 }
 const { textosInici, classesClaus } = Astro.props;
@@ -19,8 +19,7 @@ const { textosInici, classesClaus } = Astro.props;
             text = text.replace(clau, htmlClau);
           });
 
-        if (index === 0)
-          return <p class='first-letter' set:html={text} />;
+        if (index === 0) return <p class='first-letter' set:html={text} />;
         return <p class='leading-relaxed' set:html={text} />;
       }
       return <p class='leading-relaxed'>{text}</p>;

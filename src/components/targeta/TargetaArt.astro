@@ -3,16 +3,16 @@ import { galeria } from '../../lib/data/index';
 import { textosBiografia } from '../../lib/data/index';
 import { obtenirTextBiografia } from '../../lib/utils/obtenirTextBiografia';
 
-import type { artT } from '../../lib/types';
+import type { ArtT } from '../../lib/types';
 import { baseUrl } from '../../lib/const/baseUrl';
 
 const { idArt } = Astro.props;
-const targeta: artT = galeria[idArt];
+const targeta: ArtT = galeria[idArt];
 const { src, alt, title, any, mida, tecnica, descripcio, descripcioLlarga } =
   targeta;
 
-const textBiografiaTargeta = obtenirTextBiografia(any, textosBiografia);
-const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
+const TextBiografiaTargeta = obtenirTextBiografia(any, textosBiografia);
+const { anys: anysPeriode, titol: titolPeriode } = TextBiografiaTargeta;
 ---
 
 <div
@@ -22,7 +22,7 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
       <p class='text-red-500 text-2xl text-start uppercase'>{title}</p>
       <span class='text-xl font-thin'> ({any})</span>
     </div>
-    <p class="pl-4">{descripcio}</p>
+    <p class='pl-4'>{descripcio}</p>
   </div>
 
   <div>
@@ -55,7 +55,8 @@ const { anys: anysPeriode, titol: titolPeriode } = textBiografiaTargeta;
   </div>
   <a href={`${baseUrl}/galeria`}>
     <button
-    class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1'
-    >Tornar a Galeria</button>
+      class='w-full border-2 rounded-xl border-zinc-200 hover:bg-zinc-200 focus:border-neutral-800 py-1'
+      >Tornar a Galeria</button
+    >
   </a>
 </div>

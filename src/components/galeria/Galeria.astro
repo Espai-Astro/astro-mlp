@@ -1,6 +1,6 @@
 ---
 import { galeria } from '../../lib/data';
-import type { artT } from '../../lib/types';
+import type { ArtT } from '../../lib/types';
 
 import gargot from '../../assets/svg/scribble.svg';
 import { GaleriaArt } from './';
@@ -38,9 +38,7 @@ const srcGargot = gargot.src;
       </p>
     </div>
     <div class='grid-cols-1 lg:grid-cols-2 gap-0 sm:gap-x-16 sm:gap-y-20 grid'>
-      {
-        galeria.map((art: artT) => <GaleriaArt art={art} />)
-        }
+      {galeria.map((art: ArtT) => <GaleriaArt art={art} />)}
     </div>
   </div>
   <a href={baseUrl} class='w-full lg:w-1/4'>

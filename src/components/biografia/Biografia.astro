@@ -2,7 +2,7 @@
 import gargot from '../../assets/svg/scribble.svg';
 import { TextBiografia } from './';
 import { textosBiografia } from '../../lib/data';
-import type { textBiografiaT } from '../../lib/types';
+import type { TextBiografiaT } from '../../lib/types';
 import { baseUrl } from '../../lib/const/baseUrl';
 const mida = textosBiografia.length;
 const srcGargot = gargot.src;
@@ -19,7 +19,7 @@ const classesClaus = 'font-bold text-red-500';
     <div
       class='flex flex-col gap-16 py-4 px-8 lg:py-12 lg:px-20 border-zinc-200 rounded-xl border-2'>
       {
-        textosBiografia.map((textBiografia: textBiografiaT, index) => (
+        textosBiografia.map((textBiografia: TextBiografiaT, index) => (
           <TextBiografia
             textBiografia={textBiografia}
             mida={mida}
